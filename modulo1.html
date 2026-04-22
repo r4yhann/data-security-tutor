@@ -3,13 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="DataSec Academy - Módulo 1: Seguridad en la Gestión de Datos. Fundamentos, Tríada CIA y Control de Acceso.">
+    <meta name="theme-color" content="#0a0a0a">
     <meta name="google-adsense-account" content="ca-pub-4661208062394859">
+   
     <title>Módulo 1: Gestión de Datos | DataSec Academy</title>
     
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4661208062394859"
-     crossorigin="anonymous"></script>
+    <link rel="icon" type="image/png" href="favicon.png?v=2">
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4661208062394859" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -19,7 +23,7 @@
         <div class="container">
             <a class="navbar-brand" href="index.html">DataSec<span class="brand-accent">.Academy</span></a>
             <div class="d-flex ms-auto">
-                <a href="index.html" class="btn btn-outline-cyber btn-sm"><i class="bi bi-arrow-left"></i> Volver al Dashboard</a>
+                <a href="index.html" class="btn btn-outline-cyber btn-sm px-3"><i class="bi bi-arrow-left me-2"></i> Volver al Dashboard</a>
             </div>
         </div>
     </nav>
@@ -27,7 +31,7 @@
     <header class="container py-5 mt-4 reveal">
         <div class="module-badge mb-3">MÓDULO 1</div>
         <h1 class="display-4 fw-bold text-white mb-3">Seguridad en la <span class="brand-accent">Gestión de Datos</span></h1>
-        <p class="lead text-secondary" style="max-width: 900px;">
+        <p class="lead text-secondary">
             La seguridad no es un producto que se compra, sino un proceso continuo. La combinación de una clasificación de datos inteligente, un control de acceso basado en el menor privilegio y una auditoría constante forma la base de cualquier sistema de información resiliente.
         </p>
     </header>
@@ -38,40 +42,42 @@
             <h2 class="fw-bold text-white mb-4 border-bottom border-secondary pb-2"><span class="brand-accent">#</span> Fundamentos y el Valor Estratégico del Dato</h2>
             
             <h4 class="text-white mt-4">1.1 El Dato como Activo Crítico en la Industria 4.0</h4>
-            <p class="text-secondary text-justify">
+            <p class="text-secondary">
                 En el contexto actual de transformación digital, los datos han dejado de ser subproductos de la actividad empresarial para convertirse en el motor de la misma. La seguridad en su gestión no es simplemente una "capa extra" de TI, sino una disciplina fundamental que garantiza la continuidad del negocio. Cuando hablamos de gestión de datos, nos referimos al control del ciclo de vida completo: desde la ingesta y el almacenamiento hasta su procesamiento y eventual eliminación.
             </p>
 
             <h4 class="text-white mt-5">1.2 La Tríada CIA: El Marco de Referencia Universal</h4>
             <p class="text-secondary mb-4">Toda estrategia de seguridad de datos se mide por su capacidad para sostener tres pilares. Un fallo en cualquiera de estos puntos se considera una brecha de seguridad:</p>
+            
             <div class="row g-4 mb-5">
                 <div class="col-md-4">
-                    <div class="p-4 rounded border border-secondary h-100 bg-dark">
-                        <h5 class="text-brand-accent fw-bold"><i class="bi bi-eye-slash-fill me-2"></i> Confidencialidad</h5>
-                        <p class="text-secondary small mt-2">La garantía de que la información solo es accesible para personas o sistemas debidamente autorizados. Se logra mediante cifrado y controles de acceso. Una violación ocurre, por ejemplo, cuando un atacante extrae una base de datos (exfiltración).</p>
+                    <div class="p-4 border border-info rounded h-100 bg-info bg-opacity-10">
+                        <h5 class="text-info fw-bold"><i class="bi bi-eye-slash-fill me-2"></i> Confidencialidad</h5>
+                        <p class="text-white small mt-2 mb-0">La garantía de que la información solo es accesible para personas o sistemas debidamente autorizados. Se logra mediante cifrado y controles de acceso. Una violación ocurre, por ejemplo, cuando un atacante extrae una base de datos (exfiltración).</p>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="p-4 rounded border border-secondary h-100 bg-dark">
-                        <h5 class="text-brand-accent fw-bold"><i class="bi bi-shield-check me-2"></i> Integridad</h5>
-                        <p class="text-secondary small mt-2">Protección contra la alteración no autorizada de los datos. El dato debe ser exacto y fiable. Si un atacante modifica saldos bancarios o altera registros de salud, la integridad se ha perdido (suele ser más peligroso que el robo).</p>
+                    <div class="p-4 border border-success rounded h-100 bg-success bg-opacity-10">
+                        <h5 class="text-success fw-bold"><i class="bi bi-shield-check me-2"></i> Integridad</h5>
+                        <p class="text-white small mt-2 mb-0">Protección contra la alteración no autorizada de los datos. El dato debe ser exacto y fiable. Si un atacante modifica saldos bancarios o altera registros de salud, la integridad se ha perdido (suele ser más peligroso que el robo).</p>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="p-4 rounded border border-secondary h-100 bg-dark">
-                        <h5 class="text-brand-accent fw-bold"><i class="bi bi-hdd-network-fill me-2"></i> Disponibilidad</h5>
-                        <p class="text-secondary small mt-2">Los sistemas y datos deben estar listos para su uso cuando los usuarios autorizados los necesiten. Los ataques de Denegación de Servicio (DoS) o el secuestro de información por Ransomware son los principales enemigos.</p>
+                    <div class="p-4 border border-warning rounded h-100 bg-warning bg-opacity-10">
+                        <h5 class="text-warning fw-bold"><i class="bi bi-hdd-network-fill me-2"></i> Disponibilidad</h5>
+                        <p class="text-white small mt-2 mb-0">Los sistemas y datos deben estar listos para su uso cuando los usuarios autorizados los necesiten. Los ataques de Denegación de Servicio (DoS) o el secuestro de información por Ransomware son los principales enemigos.</p>
                     </div>
                 </div>
             </div>
 
             <h4 class="text-white mt-4">1.3 Clasificación de los Datos: Priorizando la Protección</h4>
             <p class="text-secondary mb-4">No todos los datos requieren el mismo nivel de esfuerzo defensivo. La gestión eficiente implica clasificar la información para asignar recursos de manera inteligente:</p>
-            <div class="p-4 rounded border border-secondary" style="background-color: var(--bg-surface-hover);">
-                <div class="mb-3"><span class="badge bg-success me-2">Datos Públicos</span> <span class="text-secondary">Información que no causa daño si se divulga (catálogos, notas de prensa).</span></div>
-                <div class="mb-3"><span class="badge bg-info text-dark me-2">Uso Interno</span> <span class="text-secondary">Información que, aunque no es secreta, no debería salir de la organización (manuales de procesos, organigramas).</span></div>
-                <div class="mb-3"><span class="badge bg-warning text-dark me-2">Confidenciales</span> <span class="text-secondary">Información sensible cuya divulgación causa daños financieros o reputacionales (estrategias de mercado, listas de precios).</span></div>
-                <div><span class="badge bg-danger me-2">Restringidos</span> <span class="text-secondary">Información crítica que requiere los más altos niveles de control (llaves criptográficas, datos biométricos, propiedad intelectual).</span></div>
+            
+            <div class="stats-bar p-4 text-start bg-dark border-secondary">
+                <div class="mb-3"><span class="badge bg-success me-2 py-2 px-3">Datos Públicos</span> <span class="text-secondary small">Información que no causa daño si se divulga (catálogos, notas de prensa).</span></div>
+                <div class="mb-3"><span class="badge bg-info text-dark me-2 py-2 px-3">Uso Interno</span> <span class="text-secondary small">Información que, aunque no es secreta, no debería salir de la organización (manuales de procesos, organigramas).</span></div>
+                <div class="mb-3"><span class="badge bg-warning text-dark me-2 py-2 px-3">Confidenciales</span> <span class="text-secondary small">Información sensible cuya divulgación causa daños financieros o reputacionales (estrategias de mercado, listas de precios).</span></div>
+                <div><span class="badge bg-danger me-2 py-2 px-3">Restringidos</span> <span class="text-secondary small">Información crítica que requiere los más altos niveles de control (llaves criptográficas, datos biométricos, propiedad intelectual).</span></div>
             </div>
         </section>
 
@@ -80,40 +86,43 @@
             
             <h4 class="text-white mt-4">2.1 Identificación, Autenticación y Autorización</h4>
             <p class="text-secondary">Este es el proceso de tres pasos que rige quién entra al sistema de gestión de datos:</p>
-            <ul class="text-secondary">
+            <ul class="text-secondary mb-5">
                 <li><strong class="text-white">Identificación:</strong> El usuario dice quién es (ej. un nombre de usuario).</li>
                 <li><strong class="text-white">Autenticación:</strong> El usuario demuestra quién es (ej. mediante una contraseña, un token o huella digital).</li>
                 <li><strong class="text-white">Autorización:</strong> El sistema decide qué puede hacer ese usuario una vez dentro (ej. leer, pero no borrar).</li>
             </ul>
 
-            <h4 class="text-white mt-5">2.2 Modelos de Control de Acceso (Access Control Models)</h4>
+            <h4 class="text-white">2.2 Modelos de Control de Acceso (Access Control Models)</h4>
             <p class="text-secondary mb-4">En la arquitectura de una página web educativa o empresarial, se deben implementar modelos robustos:</p>
-            <div class="row g-4 mb-4">
+            
+            <div class="row g-4 mb-5">
                 <div class="col-lg-4">
-                    <div class="p-3 border-start border-3 border-info bg-dark h-100">
-                        <h6 class="text-white fw-bold">RBAC (Role-Based)</h6>
-                        <p class="text-secondary small mb-0">Los permisos se ligan a roles, no a personas. Si un usuario es "Estudiante", tiene permisos de lectura; si es "Profesor", de edición. Es el modelo más eficiente para escalar.</p>
+                    <div class="p-4 border border-info rounded h-100 bg-info bg-opacity-10">
+                        <h6 class="text-info fw-bold">RBAC (Role-Based)</h6>
+                        <p class="text-white small mb-0">Los permisos se ligan a roles, no a personas. Si un usuario es "Estudiante", tiene permisos de lectura; si es "Profesor", de edición. Es el modelo más eficiente para escalar.</p>
                     </div>
                 </div>
                 <div class="col-lg-4">
-                    <div class="p-3 border-start border-3 border-warning bg-dark h-100">
-                        <h6 class="text-white fw-bold">ABAC (Attribute-Based)</h6>
-                        <p class="text-secondary small mb-0">Más granular. El acceso depende de atributos del sujeto, recurso y entorno. Ej: "El administrador accede a la BD solo desde la IP de la oficina en horario laboral".</p>
+                    <div class="p-4 border border-warning rounded h-100 bg-warning bg-opacity-10">
+                        <h6 class="text-warning fw-bold">ABAC (Attribute-Based)</h6>
+                        <p class="text-white small mb-0">Más granular. El acceso depende de atributos del sujeto, recurso y entorno. Ej: "El administrador accede a la BD solo desde la IP de la oficina en horario laboral".</p>
                     </div>
                 </div>
                 <div class="col-lg-4">
-                    <div class="p-3 border-start border-3 border-danger bg-dark h-100">
-                        <h6 class="text-white fw-bold">Principio Menor Privilegio (PoLP)</h6>
-                        <p class="text-secondary small mb-0">A cualquier entidad se le asignan solo los privilegios mínimos necesarios para su tarea. Limita el "radio de explosión" si una cuenta es comprometida.</p>
+                    <div class="p-4 border border-danger rounded h-100 bg-danger bg-opacity-10">
+                        <h6 class="text-danger fw-bold">Principio Menor Privilegio (PoLP)</h6>
+                        <p class="text-white small mb-0">A cualquier entidad se le asignan solo los privilegios mínimos necesarios para su tarea. Limita el "radio de explosión" si una cuenta es comprometida.</p>
                     </div>
                 </div>
             </div>
 
-            <h4 class="text-white mt-5">2.3 El Desafío de la Autenticación Moderna</h4>
-            <p class="text-secondary p-4 rounded border border-secondary" style="background-color: var(--bg-surface);">
-                <i class="bi bi-key-fill text-brand-accent fs-4 me-2 align-middle"></i>
-                Las contraseñas ya no son suficientes. La gestión segura hoy exige el <strong>MFA (Multi-Factor Authentication)</strong>. El uso de algo que el usuario sabe (contraseña), algo que el usuario tiene (un token en el celular) y algo que el usuario es (biometría) reduce drásticamente las probabilidades de un acceso no autorizado exitoso.
-            </p>
+            <h4 class="text-white">2.3 El Desafío de la Autenticación Moderna</h4>
+            <div class="p-4 border border-success rounded d-flex align-items-center bg-success bg-opacity-10">
+                <i class="bi bi-shield-lock-fill text-success fs-1 me-4 d-none d-md-block"></i>
+                <p class="text-white small mb-0">
+                    Las contraseñas ya no son suficientes. La gestión segura hoy exige el <strong>MFA (Multi-Factor Authentication)</strong>. El uso de algo que el usuario sabe (contraseña), algo que el usuario tiene (un token en el celular) y algo que el usuario es (biometría) reduce drásticamente las probabilidades de un acceso no autorizado exitoso.
+                </p>
+            </div>
         </section>
 
         <section class="mb-5 reveal">
@@ -126,24 +135,24 @@
                     
                     <h4 class="text-white mt-4">3.2 ¿Qué debemos auditar?</h4>
                     <ul class="text-secondary small">
-                        <li>Intentos fallidos de inicio de sesión.</li>
-                        <li>Escalada de privilegios (intentos de obtener permisos de admin).</li>
-                        <li>Acceso a datos "Restringidos" o "Confidenciales".</li>
-                        <li>Exportación masiva de datos (posible exfiltración).</li>
+                        <li class="mb-1">Intentos fallidos de inicio de sesión.</li>
+                        <li class="mb-1">Escalada de privilegios (intentos de obtener permisos de admin).</li>
+                        <li class="mb-1">Acceso a datos "Restringidos" o "Confidenciales".</li>
+                        <li class="mb-1">Exportación masiva de datos (posible exfiltración).</li>
                         <li>Cambios en la configuración de seguridad del sistema.</li>
                     </ul>
                 </div>
                 <div class="col-lg-6">
-                    <div class="p-4 rounded border border-secondary mb-4" style="background-color: rgba(229, 9, 20, 0.05);">
-                        <h5 class="text-brand-accent"><i class="bi bi-fingerprint me-2"></i> 3.3 El Concepto de No Repudio</h5>
-                        <p class="text-secondary small mb-0">La auditoría garantiza el No Repudio, que es la capacidad de asegurar que un usuario no pueda negar haber realizado una acción específica. Si un administrador borra una tabla, el sistema debe proporcionar pruebas irrefutables de que fue esa cuenta específica, en esa fecha y desde esa IP.</p>
+                    <div class="p-4 rounded border border-danger bg-danger bg-opacity-10 mb-4">
+                        <h5 class="text-danger fw-bold"><i class="bi bi-fingerprint me-2"></i> 3.3 El Concepto de No Repudio</h5>
+                        <p class="text-white small mb-0">La auditoría garantiza el No Repudio, que es la capacidad de asegurar que un usuario no pueda negar haber realizado una acción específica. Si un administrador borra una tabla, el sistema debe proporcionar pruebas irrefutables de que fue esa cuenta específica, en esa fecha y desde esa IP.</p>
                     </div>
 
                     <h4 class="text-white">3.4 Monitoreo y SIEM</h4>
                     <p class="text-secondary small">Para gestionar datos a gran escala, se usan sistemas SIEM (Security Information and Event Management). Recolectan logs de múltiples fuentes y usan IA para encontrar patrones, como un usuario accediendo desde tres países diferentes en menos de una hora.</p>
 
                     <h4 class="text-white mt-4">3.5 Cumplimiento Legal y Ético</h4>
-                    <p class="text-secondary small">En México, la <strong>LFPDPPP</strong> establece que las empresas son responsables de la seguridad de los datos personales. La auditoría es una obligación legal para demostrar la protección de la privacidad.</p>
+                    <p class="text-secondary small">En México, la <strong class="text-white">LFPDPPP</strong> establece que las empresas son responsables de la seguridad de los datos personales. La auditoría es una obligación legal para demostrar la protección de la privacidad.</p>
                 </div>
             </div>
         </section>
@@ -152,33 +161,35 @@
             <h3 class="fw-bold text-white mb-4"><span class="brand-accent">/</span> Laboratorio: Asegurando la Confidencialidad</h3>
             <p class="text-secondary mb-4">Aplica la teoría de Control de Acceso. Hemos detectado un archivo confidencial expuesto. Utiliza Linux para encontrarlo y restringir sus permisos aplicando el Principio de Menor Privilegio.</p>
 
-            <div class="row g-0 rounded overflow-hidden" style="border: 1px solid var(--border-color);">
-                <div class="col-md-4 p-4" style="background-color: var(--bg-surface-hover);">
-                    <h5 class="text-white fw-bold border-bottom border-secondary pb-2 mb-3"><i class="bi bi-list-check brand-accent"></i> Tareas de la Misión</h5>
+            <div class="row g-0 stats-bar overflow-hidden border border-secondary border-opacity-50">
+                <div class="col-lg-4 p-4 border-end border-secondary border-opacity-25 bg-dark">
+                    <h5 class="text-white fw-bold border-bottom border-secondary pb-2 mb-4"><i class="bi bi-list-check text-info me-2"></i> Tareas de la Misión</h5>
                     <ul class="list-unstyled" id="mission-tracker">
-                        <li id="step1" class="text-secondary mb-3"><i class="bi bi-circle me-2"></i><strong>Paso 1:</strong> Revisa qué archivos hay en el servidor. <br><code class="ms-4 text-muted bg-dark px-2 rounded">Comando: ls</code></li>
-                        <li id="step2" class="text-secondary mb-3"><i class="bi bi-circle me-2"></i><strong>Paso 2:</strong> Lee el contenido del archivo de clientes para verificar su sensibilidad. <br><code class="ms-4 text-muted bg-dark px-2 rounded">Comando: cat clientes.csv</code></li>
-                        <li id="step3" class="text-secondary"><i class="bi bi-circle me-2"></i><strong>Paso 3:</strong> Cambia los permisos para que solo el propietario pueda leerlo/escribirlo (Permiso 600). <br><code class="ms-4 text-muted bg-dark px-2 rounded">Comando: chmod 600 clientes.csv</code></li>
+                        <li id="step1" class="text-secondary mb-4 small"><i class="bi bi-circle me-2"></i><strong>Paso 1:</strong> Revisa qué archivos hay en el servidor. <br><code class="d-block mt-2 text-info bg-black p-2 rounded border border-info border-opacity-25">Comando: ls</code></li>
+                        <li id="step2" class="text-secondary mb-4 small"><i class="bi bi-circle me-2"></i><strong>Paso 2:</strong> Lee el contenido del archivo de clientes para verificar su sensibilidad. <br><code class="d-block mt-2 text-info bg-black p-2 rounded border border-info border-opacity-25">Comando: cat clientes.csv</code></li>
+                        <li id="step3" class="text-secondary small"><i class="bi bi-circle me-2"></i><strong>Paso 3:</strong> Cambia los permisos para que solo el propietario pueda leerlo/escribirlo (Permiso 600). <br><code class="d-block mt-2 text-info bg-black p-2 rounded border border-info border-opacity-25">Comando: chmod 600 clientes.csv</code></li>
                     </ul>
-                    <div id="mission-success" class="mt-4 p-2 text-center text-success fw-bold d-none" style="background-color: rgba(16, 185, 129, 0.1); border: 1px solid var(--accent-green); border-radius: 4px;">
-                        ¡Misión Completada! Confidencialidad Asegurada.
+                    <div id="mission-success" class="mt-4 p-3 text-center text-success fw-bold d-none bg-success bg-opacity-10 border border-success rounded">
+                        <i class="bi bi-shield-fill-check fs-4 d-block mb-2"></i> ¡Misión Completada! Confidencialidad Asegurada.
                     </div>
                 </div>
 
-                <div class="col-md-8">
-                    <div class="terminal-window h-100 rounded-0" style="border: none; border-left: 1px solid var(--border-color);">
+                <div class="col-lg-8 p-0">
+                    <div class="terminal-window h-100 rounded-0 border-0">
                         <div class="terminal-header d-flex align-items-center">
-                            <div class="rounded-circle bg-danger me-2" style="width: 12px; height: 12px;"></div>
-                            <div class="rounded-circle bg-warning me-2" style="width: 12px; height: 12px;"></div>
-                            <div class="rounded-circle bg-success me-3" style="width: 12px; height: 12px;"></div>
-                            <span class="text-secondary font-monospace" style="font-size: 0.85rem;">root@datasec:~#</span>
+                            <div class="d-flex gap-2">
+                                <span class="dot dot-red"></span>
+                                <span class="dot dot-yellow"></span>
+                                <span class="dot dot-green"></span>
+                            </div>
+                            <span class="text-secondary font-monospace ms-3" style="font-size: 0.85rem;">root@datasec:~#</span>
                         </div>
-                        <div class="terminal-body" id="terminal-output" style="min-height: 350px; max-height: 350px; overflow-y: auto;">
+                        <div class="terminal-body" id="terminal-output" style="max-height: 400px; overflow-y: auto;">
                             <div><span class="text-success">✔</span> Entorno Forense Iniciado. Esperando comandos...</div>
                             <br>
                             <div class="terminal-input-row d-flex align-items-center mt-2">
                                 <span class="terminal-prompt" id="prompt-text">root@academy:~$</span>
-                                <input type="text" class="terminal-input flex-grow-1" id="cmd-input" autocomplete="off" spellcheck="false">
+                                <input type="text" class="terminal-input flex-grow-1" id="cmd-input" autocomplete="off" spellcheck="false" autocorrect="off">
                             </div>
                         </div>
                     </div>
@@ -189,91 +200,91 @@
         <section class="mb-5 reveal">
             <h3 class="fw-bold text-white mb-4"><span class="brand-accent">/</span> Evaluación de Conocimientos</h3>
             
-            <div class="p-4 p-md-5 rounded border border-secondary" style="background-color: var(--bg-surface);">
+            <div class="stats-bar p-4 p-md-5">
                 <form id="quiz-form">
                     
-                    <div class="mb-5 border-bottom border-dark pb-4">
-                        <label class="text-white mb-3 fw-bold fs-5"><span class="text-secondary fs-6 me-2">01.</span> ¿Cuáles son los tres principios de la Tríada CIA?</label>
-                        <div class="form-check mb-2">
-                            <input class="form-check-input border-secondary bg-dark" type="radio" name="q1" value="a" id="q1a" required>
+                    <div class="mb-5 border-bottom border-secondary border-opacity-50 pb-4">
+                        <label class="text-white mb-4 fw-bold fs-5"><span class="brand-accent fs-6 me-2">01.</span> ¿Cuáles son los tres principios de la Tríada CIA?</label>
+                        <div class="form-check mb-3">
+                            <input class="form-check-input" type="radio" name="q1" value="a" id="q1a" required>
                             <label class="form-check-label text-secondary" for="q1a">Confidencialidad, Inteligencia, Autenticidad</label>
                         </div>
-                        <div class="form-check mb-2">
-                            <input class="form-check-input border-secondary bg-dark" type="radio" name="q1" value="b" id="q1b">
+                        <div class="form-check mb-3">
+                            <input class="form-check-input" type="radio" name="q1" value="b" id="q1b">
                             <label class="form-check-label text-secondary" for="q1b">Confidencialidad, Integridad, Disponibilidad</label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input border-secondary bg-dark" type="radio" name="q1" value="c" id="q1c">
+                            <input class="form-check-input" type="radio" name="q1" value="c" id="q1c">
                             <label class="form-check-label text-secondary" for="q1c">Control, Integridad, Distribución</label>
                         </div>
                     </div>
 
-                    <div class="mb-5 border-bottom border-dark pb-4">
-                        <label class="text-white mb-3 fw-bold fs-5"><span class="text-secondary fs-6 me-2">02.</span> ¿Cuál es el objetivo principal del control de acceso RBAC?</label>
-                        <div class="form-check mb-2">
-                            <input class="form-check-input border-secondary bg-dark" type="radio" name="q2" value="a" id="q2a" required>
+                    <div class="mb-5 border-bottom border-secondary border-opacity-50 pb-4">
+                        <label class="text-white mb-4 fw-bold fs-5"><span class="brand-accent fs-6 me-2">02.</span> ¿Cuál es el objetivo principal del control de acceso RBAC?</label>
+                        <div class="form-check mb-3">
+                            <input class="form-check-input" type="radio" name="q2" value="a" id="q2a" required>
                             <label class="form-check-label text-secondary" for="q2a">Asignar permisos según la dirección IP y el horario.</label>
                         </div>
-                        <div class="form-check mb-2">
-                            <input class="form-check-input border-secondary bg-dark" type="radio" name="q2" value="b" id="q2b">
+                        <div class="form-check mb-3">
+                            <input class="form-check-input" type="radio" name="q2" value="b" id="q2b">
                             <label class="form-check-label text-secondary" for="q2b">Ligar los permisos a roles y no a personas individuales para escalar eficientemente.</label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input border-secondary bg-dark" type="radio" name="q2" value="c" id="q2c">
+                            <input class="form-check-input" type="radio" name="q2" value="c" id="q2c">
                             <label class="form-check-label text-secondary" for="q2c">Eliminar por completo el uso de contraseñas.</label>
                         </div>
                     </div>
 
-                    <div class="mb-5 border-bottom border-dark pb-4">
-                        <label class="text-white mb-3 fw-bold fs-5"><span class="text-secondary fs-6 me-2">03.</span> El concepto que impide que un usuario pueda negar haber realizado una acción (ej. borrar una base de datos) se conoce como:</label>
-                        <div class="form-check mb-2">
-                            <input class="form-check-input border-secondary bg-dark" type="radio" name="q3" value="a" id="q3a" required>
+                    <div class="mb-5 border-bottom border-secondary border-opacity-50 pb-4">
+                        <label class="text-white mb-4 fw-bold fs-5"><span class="brand-accent fs-6 me-2">03.</span> El concepto que impide que un usuario pueda negar haber realizado una acción se conoce como:</label>
+                        <div class="form-check mb-3">
+                            <input class="form-check-input" type="radio" name="q3" value="a" id="q3a" required>
                             <label class="form-check-label text-secondary" for="q3a">Escalada de Privilegios</label>
                         </div>
-                        <div class="form-check mb-2">
-                            <input class="form-check-input border-secondary bg-dark" type="radio" name="q3" value="b" id="q3b">
+                        <div class="form-check mb-3">
+                            <input class="form-check-input" type="radio" name="q3" value="b" id="q3b">
                             <label class="form-check-label text-secondary" for="q3b">Autenticación Biométrica</label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input border-secondary bg-dark" type="radio" name="q3" value="c" id="q3c">
+                            <input class="form-check-input" type="radio" name="q3" value="c" id="q3c">
                             <label class="form-check-label text-secondary" for="q3c">No Repudio</label>
                         </div>
                     </div>
 
-                    <div class="mb-5 border-bottom border-dark pb-4">
-                        <label class="text-white mb-3 fw-bold fs-5"><span class="text-secondary fs-6 me-2">04.</span> ¿Qué marco normativo mexicano rige la protección y seguridad de datos personales?</label>
-                        <div class="form-check mb-2">
-                            <input class="form-check-input border-secondary bg-dark" type="radio" name="q4" value="a" id="q4a" required>
+                    <div class="mb-5 border-bottom border-secondary border-opacity-50 pb-4">
+                        <label class="text-white mb-4 fw-bold fs-5"><span class="brand-accent fs-6 me-2">04.</span> ¿Qué marco normativo mexicano rige la protección y seguridad de datos personales?</label>
+                        <div class="form-check mb-3">
+                            <input class="form-check-input" type="radio" name="q4" value="a" id="q4a" required>
                             <label class="form-check-label text-secondary" for="q4a">GDPR</label>
                         </div>
-                        <div class="form-check mb-2">
-                            <input class="form-check-input border-secondary bg-dark" type="radio" name="q4" value="b" id="q4b">
+                        <div class="form-check mb-3">
+                            <input class="form-check-input" type="radio" name="q4" value="b" id="q4b">
                             <label class="form-check-label text-secondary" for="q4b">LFPDPPP</label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input border-secondary bg-dark" type="radio" name="q4" value="c" id="q4c">
+                            <input class="form-check-input" type="radio" name="q4" value="c" id="q4c">
                             <label class="form-check-label text-secondary" for="q4c">HIPAA</label>
                         </div>
                     </div>
 
-                    <div class="mb-5 border-bottom border-dark pb-4">
-                        <label class="text-white mb-3 fw-bold fs-5"><span class="text-secondary fs-6 me-2">05.</span> ¿Qué significa el Principio de Menor Privilegio (PoLP)?</label>
-                        <div class="form-check mb-2">
-                            <input class="form-check-input border-secondary bg-dark" type="radio" name="q5" value="a" id="q5a" required>
+                    <div class="mb-5 pb-2">
+                        <label class="text-white mb-4 fw-bold fs-5"><span class="brand-accent fs-6 me-2">05.</span> ¿Qué significa el Principio de Menor Privilegio (PoLP)?</label>
+                        <div class="form-check mb-3">
+                            <input class="form-check-input" type="radio" name="q5" value="a" id="q5a" required>
                             <label class="form-check-label text-secondary" for="q5a">Que solo el administrador general (root) debe tener contraseñas fuertes.</label>
                         </div>
-                        <div class="form-check mb-2">
-                            <input class="form-check-input border-secondary bg-dark" type="radio" name="q5" value="b" id="q5b">
+                        <div class="form-check mb-3">
+                            <input class="form-check-input" type="radio" name="q5" value="b" id="q5b">
                             <label class="form-check-label text-secondary" for="q5b">Que a un usuario se le deben asignar solo los privilegios mínimos necesarios para completar su tarea.</label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input border-secondary bg-dark" type="radio" name="q5" value="c" id="q5c">
+                            <input class="form-check-input" type="radio" name="q5" value="c" id="q5c">
                             <label class="form-check-label text-secondary" for="q5c">Que los datos públicos no deben tener ningún tipo de cifrado.</label>
                         </div>
                     </div>
 
-                    <div class="text-center mt-5">
-                        <button type="submit" class="btn btn-cyber px-5 py-3 fs-5 w-100 w-md-auto">Calificar Módulo</button>
+                    <div class="text-center mt-2">
+                        <button type="submit" class="btn btn-cyber px-5 py-3 fs-5 w-100 w-md-auto"><i class="bi bi-send-check-fill me-2"></i> Calificar Módulo</button>
                     </div>
                 </form>
                 
@@ -283,13 +294,13 @@
 
     </main>
 
-    <footer class="text-center py-4 border-top mt-auto" style="border-color: var(--border-color) !important; background-color: var(--bg-main);">
-        <div class="container">
-            <p class="text-secondary small mb-0">&copy; 2026 DataSec Academy - Proyecto de Seguridad de la Información.</p>
+    <footer class="footer-site mt-auto">
+        <div class="container text-center">
+            <p class="text-muted tiny font-monospace mb-0">&copy; 2026 DataSec Academy - Proyecto de Seguridad de la Información BUAP.</p>
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>
