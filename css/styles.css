@@ -1,9 +1,9 @@
-/* Data Security Academy */
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Inter:wght@300;400;600;800&display=swap');
 
-html {
-    scroll-behavior: smooth; 
-}
+/* ==========================================
+   Global Variables & Base Setup
+   ========================================== */
+html { scroll-behavior: smooth; }
 
 :root {
     --bg-main: #0a0a0a;
@@ -25,133 +25,189 @@ body {
     font-family: var(--font-ui);
     -webkit-font-smoothing: antialiased;
     background-image: radial-gradient(circle at 50% 0%, var(--accent-glow) 0%, transparent 50%);
+    background-attachment: fixed;
+    overflow-x: hidden;
 }
 
-/* --- Clases de Animación (Scroll) --- */
+/* ==========================================
+   Scrollbar & Selection
+   ========================================== */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: var(--bg-main); }
+::-webkit-scrollbar-thumb { background: var(--border-color); border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: var(--accent-red); }
+
+::selection { background: rgba(229, 9, 20, 0.3); color: #fff; }
+
+/* ==========================================
+   Animations
+   ========================================== */
 .reveal {
     opacity: 0;
-    transform: translateY(40px);
-    transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+    transform: translateY(30px);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .reveal.active {
     opacity: 1;
     transform: translateY(0);
 }
 
-/* --- Navegación Esmerilada --- */
-.navbar {
-    background: rgba(10, 10, 10, 0.85) !important;
-    backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(229, 9, 20, 0.3);
-}
-.navbar-brand { font-weight: 800; color: var(--text-primary) !important; }
-.brand-accent { color: var(--accent-red); }
-.nav-link { font-weight: 600; color: var(--text-secondary) !important; }
-.nav-link:hover { color: var(--accent-red) !important; text-shadow: 0 0 10px var(--accent-glow); }
+@keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
 
-/* --- Secciones de Pantalla Completa --- */
-.fullscreen-section {
-    min-height: 100vh;
+/* ==========================================
+   Navigation
+   ========================================== */
+.navbar {
+    background-color: #000000 !important; /* Fondo totalmente negro */
+    border-bottom: 1px solid rgba(229, 9, 20, 0.4);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.8); /* Sombra para separar del contenido */
+    z-index: 1050;
+}
+.navbar-brand { 
+    font-weight: 800; 
+    color: #ffffff !important; /* Fuerza la palabra DataSec a blanco */
+}
+.brand-accent { color: var(--accent-red); }
+.nav-link { font-weight: 600; color: var(--text-secondary) !important; transition: 0.3s; }
+.nav-link:hover { color: var(--accent-red) !important; }
+
+/* ==========================================
+   Typography & Sections
+   ========================================== */
+.hero-section {
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    padding: 100px 0 50px;
+}
+.hero-title { 
+    font-size: clamp(2.2rem, 8vw, 4rem); 
+    font-weight: 800; 
+    line-height: 1.1; 
+    letter-spacing: -1px; 
+}
+.hero-subtitle { max-width: 600px; }
+.max-w-600 { max-width: 600px; }
+
+/* ==========================================
+   Cards & UI Elements
+   ========================================== */
+.stats-bar {
+    background: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+}
+
+.feature-card, .module-card {
+    background: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 30px;
+    height: 100%;
+    transition: 0.3s;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    padding-top: 80px;
-    padding-bottom: 40px;
+}
+.feature-card:hover, .module-card:hover {
+    background: var(--bg-surface-hover);
+    border-color: var(--accent-red);
+    transform: translateY(-5px);
 }
 
-/* --- Hero Section --- */
-.hero-title { font-size: 4rem; font-weight: 800; line-height: 1.1; letter-spacing: -1.5px; }
-
-/* --- Tarjetas de Módulos --- */
-.module-card {
-    background-color: var(--bg-surface);
-    border: 1px solid var(--border-color);
-    border-left: 3px solid transparent;
-    border-radius: 8px;
-    padding: 24px;
-    height: 100%;
-    transition: all 0.3s ease;
-}
-.module-card:hover {
-    border-color: var(--border-color);
-    border-left: 3px solid var(--accent-red);
-    transform: translateX(5px);
-    box-shadow: 10px 10px 30px rgba(0,0,0,0.5);
-    background-color: var(--bg-surface-hover);
-}
 .module-badge {
     background: rgba(229, 9, 20, 0.1);
     color: var(--accent-red);
-    font-size: 0.75rem;
-    padding: 4px 10px;
+    font-size: 0.7rem;
+    padding: 4px 12px;
     border-radius: 4px;
-    font-weight: 600;
+    font-weight: 700;
+    border: 1px solid rgba(229, 9, 20, 0.2);
     display: inline-block;
-    margin-bottom: 15px;
-    border: 1px solid rgba(229, 9, 20, 0.3);
 }
 
-/* --- Botones --- */
+/* ==========================================
+   Buttons
+   ========================================== */
 .btn-cyber {
-    background-color: var(--accent-red);
+    background: var(--accent-red);
     color: #fff;
-    font-weight: 600;
+    font-weight: 700;
     border: none;
-    padding: 10px 24px;
     border-radius: 4px;
-    transition: all 0.2s;
     box-shadow: 0 4px 15px var(--accent-glow);
+    transition: all 0.3s ease;
 }
-.btn-cyber:hover { background-color: var(--accent-red-hover); color: #fff; transform: translateY(-2px); }
+.btn-cyber:hover { background: var(--accent-red-hover); color: #fff; transform: scale(1.02); }
+
 .btn-outline-cyber {
-    background-color: transparent;
-    color: var(--accent-red);
-    border: 1px solid var(--accent-red);
-    font-weight: 600;
-    padding: 8px 20px;
-    border-radius: 4px;
-    transition: all 0.2s;
-}
-.btn-outline-cyber:hover { background: var(--accent-glow); color: var(--accent-red-hover); }
-
-/* --- Terminal Workspace --- */
-.terminal-window {
-    background-color: #050505;
+    background: transparent;
+    color: var(--text-primary);
     border: 1px solid var(--border-color);
-    border-radius: 6px;
-    box-shadow: 0 20px 50px rgba(0,0,0,0.8);
+    font-weight: 600;
+    transition: all 0.3s ease;
 }
-.terminal-header {
-    background-color: var(--bg-surface);
-    padding: 12px 15px;
-    border-bottom: 1px solid var(--border-color);
-    display: flex;
-    align-items: center;
-}
-.terminal-body {
-    padding: 20px;
-    font-family: var(--font-mono);
-    color: var(--text-secondary);
-    font-size: 0.95rem;
-    min-height: 250px;
-}
-.terminal-prompt { color: var(--accent-red); margin-right: 8px; font-weight: bold; }
-.terminal-input { background: transparent; border: none; color: var(--text-primary); font-family: var(--font-mono); outline: none; width: 80%; }
+.btn-outline-cyber:hover { border-color: var(--accent-red); color: var(--accent-red); }
 
-/* Ajuste de títulos para móviles */
+/* ==========================================
+   Terminal Workspaces
+   ========================================== */
+.terminal-window {
+    background: #000;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+}
+.terminal-header { background: #1a1a1a; padding: 12px; border-bottom: 1px solid var(--border-color); }
+.terminal-body { padding: 20px; font-family: var(--font-mono); font-size: 0.85rem; color: var(--text-secondary); line-height: 1.5; }
+.terminal-cursor {
+    display: inline-block;
+    width: 7px;
+    height: 15px;
+    background: var(--accent-red);
+    animation: blink 1s step-end infinite;
+    vertical-align: middle;
+}
+
+.terminal-input { 
+    background: transparent !important; 
+    background-color: transparent !important;
+    border: none !important; 
+    color: #ffffff !important; 
+    outline: none !important; 
+    box-shadow: none !important;
+}
+
+.terminal-input:focus {
+    background: transparent !important;
+    background-color: transparent !important;
+    box-shadow: none !important;
+    color: #ffffff !important;
+}
+
+.dot { width: 10px; height: 10px; border-radius: 50%; display: inline-block; }
+.dot-red { background: #ff5f56; }
+.dot-yellow { background: #ffbd2e; }
+.dot-green { background: #27c93f; }
+
+/* ==========================================
+   Footer
+   ========================================== */
+.footer-site { border-top: 1px solid var(--border-color); padding: 60px 0 30px; }
+.legal-notice { background: var(--bg-surface); padding: 20px; border-radius: 8px; max-width: 800px; border: 1px solid var(--border-color); }
+.legal-text { font-size: 0.75rem; color: var(--text-secondary); line-height: 1.6; }
+.tiny { font-size: 0.65rem; }
+
+/* ==========================================
+   Media Queries
+   ========================================== */
+@media (max-width: 991px) {
+    .hero-section { text-align: center; padding-top: 60px; }
+    .hero-subtitle { margin-left: auto; margin-right: auto; }
+}
+
 @media (max-width: 576px) {
-    .display-1 {
-        font-size: 2.5rem !important; /* Ajusta el tamaño para que quepa en el ancho */
-        line-height: 1.2;
-    }
-    
-    header h1 {
-        word-wrap: break-word;
-        overflow-wrap: break-word;
-    }
-
-    .container {
-        padding-left: 20px;
-        padding-right: 20px;
-    }
+    .btn-cyber, .btn-outline-cyber { width: 100%; }
+    .hero-title { font-size: 2.2rem; }
+    .container { padding-left: 25px; padding-right: 25px; }
 }
