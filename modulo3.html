@@ -3,14 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="DataSec Academy - Módulo 3: Prevención de Filtración de Datos (DLP). Arquitectura, Inspección y Políticas.">
+    <meta name="theme-color" content="#0a0a0a">
     <meta name="google-adsense-account" content="ca-pub-4661208062394859">
+    
     <title>Módulo 3: Prevención de Filtración (DLP) | DataSec Academy</title>
     
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4661208062394859"
-     crossorigin="anonymous"></script>
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="favicon.png?v=2">
+    
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4661208062394859" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -19,7 +24,7 @@
         <div class="container">
             <a class="navbar-brand" href="index.html">DataSec<span class="brand-accent">.Academy</span></a>
             <div class="d-flex ms-auto">
-                <a href="index.html" class="btn btn-outline-cyber btn-sm"><i class="bi bi-arrow-left"></i> Volver al Dashboard</a>
+                <a href="index.html" class="btn btn-outline-cyber btn-sm px-3"><i class="bi bi-arrow-left me-2"></i> Volver al Dashboard</a>
             </div>
         </div>
     </nav>
@@ -27,8 +32,8 @@
     <header class="container py-5 mt-4 reveal">
         <div class="module-badge mb-3">MÓDULO 3</div>
         <h1 class="display-4 fw-bold text-white mb-3">Prevención de Filtración de <span class="brand-accent">Datos (DLP)</span></h1>
-        <p class="lead text-secondary" style="max-width: 900px;">
-            Este módulo es el "corazón operativo" de la seguridad. Se enfoca en detener la exfiltración antes de que ocurra, combinando herramientas tecnológicas y procesos de inspección de contenido.
+        <p class="lead text-secondary">
+            Este módulo es el "corazón operativo" de la seguridad. Se enfoca en detener la exfiltración antes de que ocurra, combinando herramientas tecnológicas y procesos de inspección de contenido para garantizar la integridad de los activos corporativos.
         </p>
     </header>
 
@@ -39,201 +44,149 @@
             
             <h4 class="text-white mt-4">1.1 ¿Qué es la Filtración de Datos (Data Leakage)?</h4>
             <p class="text-secondary">
-                La filtración de datos no siempre es el resultado de un ataque externo sofisticado. En el 60% de los casos, ocurre debido a negligencia interna, errores de configuración o empleados malintencionados. La Prevención de Filtración de Datos (DLP) es una estrategia que combina herramientas tecnológicas y procesos de inspección de contenido para garantizar que la información sensible no salga del perímetro de control de la organización.
+                La filtración de datos no siempre es el resultado de un ataque externo sofisticado. En el 60% de los casos, ocurre debido a negligencia interna, errores de configuración o empleados malintencionados. La Prevención de Filtración de Datos (DLP) es una estrategia que garantiza que la información sensible no salga del perímetro de control de la organización.
             </p>
 
             <h4 class="text-white mt-5">1.2 Los Tres Estados del Dato en DLP</h4>
-            <p class="text-secondary mb-4">Para implementar una estrategia efectiva, debemos entender dónde residen los datos y cómo se mueven:</p>
-            <div class="row g-4 mb-4">
+            <div class="row g-4 mb-5">
                 <div class="col-md-4">
-                    <div class="module-card">
-                        <h5 class="text-brand-accent fw-bold"><i class="bi bi-pc-display me-2"></i> Data in Use</h5>
-                        <p class="text-secondary small mt-2"><strong>(Datos en Uso):</strong> Información que está siendo procesada activamente por aplicaciones, endpoints o usuarios. El DLP aquí se enfoca en controlar acciones como "copiar y pegar", capturas de pantalla o impresión de documentos.</p>
+                    <div class="p-4 border border-info rounded h-100 bg-info bg-opacity-10 transition-hover">
+                        <h5 class="text-info fw-bold"><i class="bi bi-pc-display me-2"></i> Data in Use</h5>
+                        <p class="text-white small mt-2 mb-0"><strong>(Datos en Uso):</strong> Información que está siendo procesada activamente por aplicaciones o endpoints. El DLP controla acciones como "copiar y pegar".</p>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="module-card">
-                        <h5 class="text-brand-accent fw-bold"><i class="bi bi-router me-2"></i> Data in Motion</h5>
-                        <p class="text-secondary small mt-2"><strong>(Datos en Movimiento):</strong> Datos que atraviesan la red (email, tráfico web, mensajería instantánea). Las herramientas de DLP de red inspeccionan los paquetes para detectar patrones sensibles antes de que crucen el firewall.</p>
+                    <div class="p-4 border border-success rounded h-100 bg-success bg-opacity-10 transition-hover">
+                        <h5 class="text-success fw-bold"><i class="bi bi-router me-2"></i> Data in Motion</h5>
+                        <p class="text-white small mt-2 mb-0"><strong>(Datos en Movimiento):</strong> Datos que atraviesan la red (email, web). Las herramientas de red inspeccionan los paquetes buscando patrones sensibles.</p>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="module-card">
-                        <h5 class="text-brand-accent fw-bold"><i class="bi bi-database me-2"></i> Data at Rest</h5>
-                        <p class="text-secondary small mt-2"><strong>(Datos en Reposo):</strong> Archivos almacenados en servidores, bases de datos o servicios en la nube (SaaS). El objetivo es el descubrimiento y la clasificación: saber qué datos tenemos y dónde están para aplicar políticas de cifrado o restricción.</p>
+                    <div class="p-4 border border-warning rounded h-100 bg-warning bg-opacity-10 transition-hover">
+                        <h5 class="text-warning fw-bold"><i class="bi bi-database me-2"></i> Data at Rest</h5>
+                        <p class="text-white small mt-2 mb-0"><strong>(Datos en Reposo):</strong> Archivos almacenados en servidores o bases de datos. El objetivo es el descubrimiento y la clasificación.</p>
                     </div>
                 </div>
             </div>
-
-            <h4 class="text-white mt-5">1.3 Técnicas de Identificación de Contenido</h4>
-            <p class="text-secondary mb-4">¿Cómo sabe una máquina que un archivo contiene información secreta? Se utilizan tres técnicas principales:</p>
-            <ul class="list-group list-group-flush rounded border border-secondary" style="background-color: var(--bg-surface);">
-                <li class="list-group-item bg-transparent text-secondary border-secondary p-3">
-                    <strong class="text-white">Fingerprinting (Huella Digital):</strong> Se crea un hash de un documento original "maestro". Si un usuario intenta enviar incluso un fragmento de ese documento, el sistema lo reconoce por su estructura de hash.
-                </li>
-                <li class="list-group-item bg-transparent text-secondary border-secondary p-3">
-                    <strong class="text-white">Exact Data Matching (EDM):</strong> Se conecta a una base de datos y busca coincidencias exactas (ej. un nombre de cliente junto a su RFC).
-                </li>
-                <li class="list-group-item bg-transparent text-secondary border-secondary p-3">
-                    <strong class="text-white">Análisis de Contenido y Reglas (RegEx):</strong> Uso de expresiones regulares para identificar patrones numéricos, como el algoritmo de Luhn para tarjetas de crédito o formatos de CURP.
-                </li>
-            </ul>
         </section>
 
         <section class="mb-5 reveal">
             <h2 class="fw-bold text-white mb-4 border-bottom border-secondary pb-2"><span class="brand-accent">#</span> Implementación de Políticas y Clasificación</h2>
             
-            <h4 class="text-white mt-4">2.1 Taxonomía de los Datos</h4>
-            <p class="text-secondary">Antes de prevenir la filtración, debemos clasificar. No podemos proteger lo que no conocemos. Una política de DLP exitosa comienza con una taxonomía clara:</p>
-            <div class="p-4 rounded border border-secondary mb-4" style="background-color: var(--bg-surface-hover);">
-                <span class="badge bg-danger mb-2">PII</span> <strong class="text-white">Datos de Identificación Personal:</strong> Nombres, direcciones, números de seguridad social.<br><br>
-                <span class="badge bg-info mb-2">PHI</span> <strong class="text-white">Información de Salud:</strong> Historiales clínicos (protegidos por leyes como HIPAA).<br><br>
-                <span class="badge bg-warning text-dark mb-2">IP</span> <strong class="text-white">Propiedad Intelectual:</strong> Planos de ingeniería, fórmulas químicas, código fuente.<br><br>
-                <span class="badge bg-success mb-2">PCI</span> <strong class="text-white">Datos Financieros:</strong> Números de tarjetas y transacciones bancarias.
-            </div>
-
-            <div class="row g-5 mt-2">
-                <div class="col-lg-6">
-                    <h4 class="text-white">2.2 DLP en el Endpoint</h4>
-                    <p class="text-secondary">Como experto en redes, sabes que el eslabón más débil suele ser el dispositivo final (el puesto de trabajo). El DLP de endpoint instala agentes que monitorean:</p>
-                    <ul class="text-secondary">
-                        <li><strong class="text-white">Puertos USB:</strong> Bloqueo de escritura en medios no autorizados o cifrado forzado de memorias externas.</li>
-                        <li><strong class="text-white">Impresión:</strong> Evitar que documentos clasificados como "Confidenciales" se envíen a impresoras físicas o PDF.</li>
-                        <li><strong class="text-white">Cifrado de Disco:</strong> Asegurar que si el dispositivo se pierde, los datos sigan siendo inaccesibles.</li>
-                    </ul>
-                </div>
-                <div class="col-lg-6">
-                    <h4 class="text-white">2.3 Inspección SSL/TLS</h4>
-                    <p class="text-secondary">El tráfico web moderno está cifrado. Para que un DLP de red sea efectivo, debe realizar una técnica conocida como <em>Inspección HTTPS (SSL Decryption)</em>:</p>
-                    <ol class="text-secondary">
-                        <li>El firewall intercepta la conexión.</li>
-                        <li>Descifra el tráfico para inspeccionar el contenido del mensaje o archivo adjunto.</li>
-                        <li>Lo vuelve a cifrar y lo envía a su destino.</li>
-                    </ol>
-                    <div class="alert alert-warning py-2 small border-warning bg-warning bg-opacity-10 text-warning">
-                        <strong>Nota crítica:</strong> Esto presenta dilemas éticos y de privacidad que deben ser gestionados mediante políticas claras de exclusión (ej. no inspeccionar tráfico bancario personal del empleado).
+            <h4 class="text-white mt-4 mb-3 fw-bold">2.1 Taxonomía de los Datos</h4>
+            <div class="stats-bar bg-dark p-4 border-secondary text-start mb-5">
+                <div class="row g-4">
+                    <div class="col-md-6 border-end border-secondary border-opacity-25">
+                        <div class="mb-4"><span class="badge bg-danger mb-2 py-1 px-3">PII</span> <strong class="text-danger d-block">Identificación Personal (Nombre, SSN)</strong></div>
+                        <div><span class="badge bg-info mb-2 py-1 px-3 text-dark">PHI</span> <strong class="text-info d-block">Información de Salud (Historiales)</strong></div>
                     </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="mb-5 reveal">
-            <h2 class="fw-bold text-white mb-4 border-bottom border-secondary pb-2"><span class="brand-accent">#</span> Respuesta ante Incidentes y Cumplimiento</h2>
-            
-            <h4 class="text-white mt-4">3.1 Anatomía de una Respuesta de DLP</h4>
-            <p class="text-secondary mb-4">Cuando una política se dispara (un "Trigger"), el sistema puede reaccionar de varias formas:</p>
-            <div class="row g-3 text-center mb-5">
-                <div class="col-md-3">
-                    <div class="p-3 border border-info rounded h-100" style="background-color: rgba(13, 202, 240, 0.1);">
-                        <i class="bi bi-info-circle fs-3 text-info"></i><br><strong class="text-info">Notificación</strong>
-                        <p class="small text-secondary mt-2">Aviso al usuario: "¿Estás seguro de enviarlo?".</p>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="p-3 border border-warning rounded h-100" style="background-color: rgba(255, 193, 7, 0.1);">
-                        <i class="bi bi-archive fs-3 text-warning"></i><br><strong class="text-warning">Cuarentena</strong>
-                        <p class="small text-secondary mt-2">Archivo bloqueado y enviado a un oficial para revisión.</p>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="p-3 border border-danger rounded h-100" style="background-color: rgba(220, 53, 69, 0.1);">
-                        <i class="bi bi-slash-circle fs-3 text-danger"></i><br><strong class="text-danger">Bloqueo Total</strong>
-                        <p class="small text-secondary mt-2">Acción impedida de inmediato con log de auditoría.</p>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="p-3 border border-success rounded h-100" style="background-color: rgba(25, 135, 84, 0.1);">
-                        <i class="bi bi-shield-lock fs-3 text-success"></i><br><strong class="text-success">Cifrado Auto</strong>
-                        <p class="small text-secondary mt-2">Cifra el archivo antes de salir si el canal no es seguro.</p>
+                    <div class="col-md-6">
+                        <div class="mb-4"><span class="badge bg-warning text-dark mb-2 py-1 px-3">IP</span> <strong class="text-warning d-block">Propiedad Intelectual (Código, Planos)</strong></div>
+                        <div><span class="badge bg-success mb-2 py-1 px-3">PCI</span> <strong class="text-success d-block">Datos Financieros (Tarjetas)</strong></div>
                     </div>
                 </div>
             </div>
 
             <div class="row g-5">
-                <div class="col-md-6">
-                    <h4 class="text-white">3.2 El Factor Humano: Shadow IT</h4>
-                    <p class="text-secondary">El <strong>Shadow IT</strong> (uso de aplicaciones no autorizadas por el departamento de IT) es la mayor pesadilla del DLP. Un empleado que usa su Dropbox personal para llevarse trabajo a casa está creando una filtración. El DLP también es una herramienta de visibilidad para descubrir qué aplicaciones "en la sombra" están usando los empleados.</p>
+                <div class="col-lg-6">
+                    <h4 class="text-white fw-bold">2.2 DLP en el Endpoint</h4>
+                    <ul class="text-secondary small mt-3">
+                        <li class="mb-2"><strong class="text-white">Puertos USB:</strong> Bloqueo de escritura en medios no autorizados.</li>
+                        <li class="mb-2"><strong class="text-white">Impresión:</strong> Evitar impresión de documentos "Confidenciales".</li>
+                        <li><strong class="text-white">Cifrado de Disco:</strong> Asegurar los datos si el dispositivo se pierde.</li>
+                    </ul>
                 </div>
-                <div class="col-md-6">
-                    <h4 class="text-white">3.3 El Rol del Analista de Ciberseguridad</h4>
-                    <p class="text-secondary">Configurar un DLP es un proceso iterativo. Un exceso de reglas estrictas genera <strong>Falsos Positivos</strong> que detienen la productividad del negocio. Un sistema demasiado relajado genera <strong>Falsos Negativos</strong> (filtraciones no detectadas). El equilibrio se logra mediante el ajuste fino (Tuning) constante de las expresiones regulares y las huellas digitales.</p>
+                <div class="col-lg-6">
+                    <h4 class="text-white fw-bold">2.3 Inspección SSL/TLS</h4>
+                    <div class="p-3 border border-warning bg-warning bg-opacity-10 text-warning small rounded">
+                        <i class="bi bi-exclamation-triangle-fill me-2"></i><strong>Nota crítica:</strong> El tráfico web moderno está cifrado. Para que un DLP sea efectivo, debe realizar una <strong>Inspección HTTPS</strong>. Esto requiere descifrar, analizar y volver a cifrar el tráfico.
+                    </div>
                 </div>
             </div>
         </section>
 
         <section class="mb-5 reveal">
-            <h2 class="fw-bold text-white mb-4 border-bottom border-secondary pb-2"><span class="brand-accent">/</span> Laboratorio: El Guardián de los Secretos</h2>
-            <p class="text-secondary mb-4">Actúa como el motor de DLP. Define las expresiones regulares (RegEx) para detectar tarjetas de crédito y dominios corporativos. Escanea los paquetes interceptados de la red y observa cómo reacciona tu lógica.</p>
+            <h3 class="fw-bold text-white mb-4"><span class="brand-accent">/</span> Laboratorio: El Guardián de los Secretos</h3>
+            <p class="text-secondary mb-4">Define las expresiones regulares (RegEx) para detectar tarjetas de crédito y dominios corporativos. Escanea los paquetes interceptados y observa cómo reacciona tu lógica.</p>
 
-            <div class="row g-4">
-                <div class="col-lg-5">
-                    <div class="p-4 rounded h-100 border border-secondary" style="background-color: var(--bg-surface);">
-                        <h5 class="text-white mb-3"><i class="bi bi-code-slash brand-accent me-2"></i> Definición de Reglas (RegEx)</h5>
-                        <p class="small text-secondary">Ajusta las expresiones regulares. Usa el "Modo Hacker" para ver por qué reglas simples pueden ser evadidas.</p>
+            <div class="stats-bar p-0 overflow-hidden border border-secondary border-opacity-50 bg-black">
+                <div class="row g-0">
+                    <div class="col-lg-5 p-4 border-end border-secondary border-opacity-25">
+                        <h5 class="text-white mb-3 fw-bold"><i class="bi bi-code-slash text-warning me-2"></i> Reglas de Inspección</h5>
+                        <p class="small text-secondary mb-4">Ajusta los patrones de búsqueda del motor DLP.</p>
                         
-                        <div class="mb-3">
-                            <label class="text-white small fw-bold mb-1">Regla 1: Tarjeta de Crédito (PCI)</label>
-                            <input type="text" id="regex-cc" class="form-control bg-dark text-warning border-secondary font-monospace" value="\d{4}-\d{4}-\d{4}-\d{4}">
-                            <div class="text-gray small">Por defecto: Encuentra 4 bloques de números separados por guiones.</div>
+                        <div class="mb-4">
+                            <label class="text-white small fw-bold mb-2">Detección de Tarjetas (PCI)</label>
+                            <input type="text" id="regex-cc" class="form-control bg-dark text-info border-info border-opacity-50 font-monospace mb-2" value="\d{4}-\d{4}-\d{4}-\d{4}" autocomplete="off" spellcheck="false" autocorrect="off">
+                            <div class="text-muted small">Tip: Para detectar el paquete #4 usa <code>\d{4}[\s-]\d{4}[\s-]\d{4}[\s-]\d{4}</code></div>
                         </div>
                         
                         <div class="mb-4">
-                            <label class="text-white small fw-bold mb-1">Regla 2: Correo Interno Permitido</label>
-                            <input type="text" id="regex-email" class="form-control bg-dark text-warning border-secondary font-monospace" value="@empresa\.com$">
+                            <label class="text-white small fw-bold mb-2">Dominio Corporativo (Permitido)</label>
+                            <input type="text" id="regex-email" class="form-control bg-dark text-info border-info border-opacity-50 font-monospace" value="@empresa\.com$" autocomplete="off" spellcheck="false" autocorrect="off">
                         </div>
 
-                        <div class="alert border-danger bg-danger bg-opacity-10 text-white small p-3">
-                            <strong><i class="bi bi-bug-fill text-danger"></i> Desafío Hacker:</strong> El Paquete #4 intenta evadir la regla 1 usando espacios en lugar de guiones. ¡Mejora tu RegEx de tarjeta para detectarlo! <i>(Tip: usa [\s-]? en lugar de -)</i>
+                        <div class="alert bg-info bg-opacity-10 border border-info text-white small p-3 mt-4">
+                            <strong><i class="bi bi-info-circle-fill text-info me-2"></i> Info:</strong> Los cambios en RegEx se aplican al presionar "Escanear" en cada paquete.
                         </div>
                     </div>
-                </div>
 
-                <div class="col-lg-7">
-                    <div class="p-4 rounded h-100 border border-secondary" style="background-color: var(--bg-surface-hover);">
-                        <h5 class="text-white mb-3"><i class="bi bi-radar brand-accent me-2"></i> Tráfico Interceptado (Data in Motion)</h5>
+                    <div class="col-lg-7 p-4 bg-dark">
+                        <h5 class="text-white mb-4 fw-bold"><i class="bi bi-radar text-info me-2"></i> Interceptor de Tráfico en Tiempo Real</h5>
                         
-                        <div class="list-group mb-4" id="dlp-packets">
-                            <div class="list-group-item bg-dark border-secondary text-white p-3 mb-2 rounded">
-                                <div class="d-flex justify-content-between align-items-start mb-2">
+                        <div class="d-flex flex-column gap-3" id="dlp-packets" style="max-height: 500px; overflow-y: auto; padding-right: 10px;">
+                            
+                            <div class="bg-black border border-secondary border-opacity-50 rounded p-3">
+                                <div class="d-flex justify-content-between align-items-center mb-2">
                                     <span class="badge bg-secondary">Paquete #1</span>
-                                    <button class="btn btn-sm btn-outline-cyber btn-scan" data-target="1">Escanear <i class="bi bi-play-fill"></i></button>
+                                    <button class="btn btn-sm btn-outline-cyber btn-scan" data-target="1"><i class="bi bi-play-fill me-1"></i> Escanear</button>
                                 </div>
-                                <div class="small font-monospace text-secondary mb-1">Destino: <span id="dest-1">juan@gmail.com</span></div>
-                                <div class="small font-monospace text-secondary">Cuerpo: <span id="body-1">Hola jefe, le mando el reporte final al correo personal.</span></div>
+                                <div class="small font-monospace text-secondary">Destino: <span id="dest-1" class="text-white">backup@gmail.com</span></div>
+                                <div class="small font-monospace text-secondary">Cuerpo: <span id="body-1" class="text-white">Le envío los archivos del proyecto a mi correo personal.</span></div>
                                 <div id="res-1" class="mt-2 fw-bold d-none"></div>
                             </div>
 
-                            <div class="list-group-item bg-dark border-secondary text-white p-3 mb-2 rounded">
-                                <div class="d-flex justify-content-between align-items-start mb-2">
+                            <div class="bg-black border border-secondary border-opacity-50 rounded p-3">
+                                <div class="d-flex justify-content-between align-items-center mb-2">
                                     <span class="badge bg-secondary">Paquete #2</span>
-                                    <button class="btn btn-sm btn-outline-cyber btn-scan" data-target="2">Escanear <i class="bi bi-play-fill"></i></button>
+                                    <button class="btn btn-sm btn-outline-cyber btn-scan" data-target="2"><i class="bi bi-play-fill me-1"></i> Escanear</button>
                                 </div>
-                                <div class="small font-monospace text-secondary mb-1">Destino: <span id="dest-2">pagos@empresa.com</span></div>
-                                <div class="small font-monospace text-secondary">Cuerpo: <span id="body-2">El pago se hizo con la tarjeta 4512-8890-1122-3344. Saludos.</span></div>
+                                <div class="small font-monospace text-secondary">Destino: <span id="dest-2" class="text-white">soporte@empresa.com</span></div>
+                                <div class="small font-monospace text-secondary">Cuerpo: <span id="body-2" class="text-white">Favor de revisar el ticket de mantenimiento de la terminal 04.</span></div>
                                 <div id="res-2" class="mt-2 fw-bold d-none"></div>
                             </div>
 
-                            <div class="list-group-item bg-dark border-secondary text-white p-3 mb-2 rounded">
-                                <div class="d-flex justify-content-between align-items-start mb-2">
+                            <div class="bg-black border border-secondary border-opacity-50 rounded p-3">
+                                <div class="d-flex justify-content-between align-items-center mb-2">
                                     <span class="badge bg-secondary">Paquete #3</span>
-                                    <button class="btn btn-sm btn-outline-cyber btn-scan" data-target="3">Escanear <i class="bi bi-play-fill"></i></button>
+                                    <button class="btn btn-sm btn-outline-cyber btn-scan" data-target="3"><i class="bi bi-play-fill me-1"></i> Escanear</button>
                                 </div>
-                                <div class="small font-monospace text-secondary mb-1">Destino: <span id="dest-3">interno@empresa.com</span></div>
-                                <div class="small font-monospace text-secondary">Cuerpo: <span id="body-3">Adjunto lista de precios pública para revisión.</span></div>
+                                <div class="small font-monospace text-secondary">Destino: <span id="dest-3" class="text-white">contabilidad@empresa.com</span></div>
+                                <div class="small font-monospace text-secondary">Cuerpo: <span id="body-3" class="text-white">Procesar el pago con la tarjeta 1234-5678-9012-3456 ahora.</span></div>
                                 <div id="res-3" class="mt-2 fw-bold d-none"></div>
                             </div>
 
-                            <div class="list-group-item bg-dark border-danger text-white p-3 rounded" style="box-shadow: inset 0 0 10px rgba(220,53,69,0.2);">
-                                <div class="d-flex justify-content-between align-items-start mb-2">
-                                    <span class="badge bg-danger">Paquete #4 (Evasión)</span>
-                                    <button class="btn btn-sm btn-danger btn-scan" data-target="4">Escanear <i class="bi bi-play-fill"></i></button>
+                            <div class="bg-black border border-danger border-opacity-50 rounded p-3">
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <span class="badge bg-danger">Paquete #4 (Sospechoso)</span>
+                                    <button class="btn btn-sm btn-danger btn-scan" data-target="4"><i class="bi bi-play-fill me-1"></i> Escanear</button>
                                 </div>
-                                <div class="small font-monospace text-secondary mb-1">Destino: <span id="dest-4">hacker@anon.com</span></div>
-                                <div class="small font-monospace text-secondary">Cuerpo: <span id="body-4">Extraje los datos. Mi tarjeta es 4512 8890 1122 3344, deposita ahí.</span></div>
+                                <div class="small font-monospace text-secondary">Destino: <span id="dest-4" class="text-white">externo@yahoo.com</span></div>
+                                <div class="small font-monospace text-secondary">Cuerpo: <span id="body-4" class="text-white">Mi tarjeta es 1111 2222 3333 4444. Manda el depósito ahí.</span></div>
                                 <div id="res-4" class="mt-2 fw-bold d-none"></div>
                             </div>
-                        </div>
 
+                            <div class="bg-black border border-secondary border-opacity-50 rounded p-3">
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <span class="badge bg-secondary">Paquete #5</span>
+                                    <button class="btn btn-sm btn-outline-cyber btn-scan" data-target="5"><i class="bi bi-play-fill me-1"></i> Escanear</button>
+                                </div>
+                                <div class="small font-monospace text-secondary">Destino: <span id="dest-5" class="text-white">prensa@empresa.com</span></div>
+                                <div class="small font-monospace text-secondary">Cuerpo: <span id="body-5" class="text-white">Publicar el aviso de privacidad actualizado en el sitio oficial.</span></div>
+                                <div id="res-5" class="mt-2 fw-bold d-none"></div>
+                            </div>
+
+                        </div>
                     </div>
                 </div>
             </div>
@@ -242,91 +195,91 @@
         <section class="mb-5 reveal">
             <h3 class="fw-bold text-white mb-4"><span class="brand-accent">/</span> Evaluación de Conocimientos</h3>
             
-            <div class="p-4 p-md-5 rounded border border-secondary" style="background-color: var(--bg-surface);">
+            <div class="stats-bar p-4 p-md-5 bg-dark border-secondary">
                 <form id="quiz-form-m3">
                     
-                    <div class="mb-5 border-bottom border-dark pb-4">
-                        <label class="text-white mb-3 fw-bold fs-5"><span class="text-secondary fs-6 me-2">01.</span> ¿Cuál es la diferencia entre un falso positivo y un falso negativo en el contexto de DLP?</label>
+                    <div class="mb-5 border-bottom border-secondary border-opacity-25 pb-4">
+                        <label class="text-white mb-3 fw-bold fs-5"><span class="brand-accent fs-6 me-2">01.</span> ¿Cuál es la diferencia entre un falso positivo y un falso negativo en DLP?</label>
                         <div class="form-check mb-2">
-                            <input class="form-check-input border-secondary bg-dark" type="radio" name="m3q1" value="a" id="m3q1a" required>
+                            <input class="form-check-input" type="radio" name="m3q1" value="a" id="m3q1a" required>
                             <label class="form-check-label text-secondary" for="m3q1a">Falso positivo detiene tráfico legítimo; Falso negativo permite una filtración real.</label>
                         </div>
                         <div class="form-check mb-2">
-                            <input class="form-check-input border-secondary bg-dark" type="radio" name="m3q1" value="b" id="m3q1b">
+                            <input class="form-check-input" type="radio" name="m3q1" value="b" id="m3q1b">
                             <label class="form-check-label text-secondary" for="m3q1b">Falso positivo es un ataque externo; Falso negativo es un ataque interno.</label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input border-secondary bg-dark" type="radio" name="m3q1" value="c" id="m3q1c">
-                            <label class="form-check-label text-secondary" for="m3q1c">Falso positivo bloquea tarjetas de crédito; Falso negativo bloquea correos.</label>
+                            <input class="form-check-input" type="radio" name="m3q1" value="c" id="m3q1c">
+                            <label class="form-check-label text-secondary" for="m3q1c">No existe diferencia práctica.</label>
                         </div>
                     </div>
 
-                    <div class="mb-5 border-bottom border-dark pb-4">
-                        <label class="text-white mb-3 fw-bold fs-5"><span class="text-secondary fs-6 me-2">02.</span> ¿Por qué el cifrado de archivos es un complemento necesario y no un sustituto del DLP?</label>
+                    <div class="mb-5 border-bottom border-secondary border-opacity-25 pb-4">
+                        <label class="text-white mb-3 fw-bold fs-5"><span class="brand-accent fs-6 me-2">02.</span> ¿Por qué el cifrado de archivos es un complemento necesario del DLP?</label>
                         <div class="form-check mb-2">
-                            <input class="form-check-input border-secondary bg-dark" type="radio" name="m3q2" value="a" id="m3q2a" required>
-                            <label class="form-check-label text-secondary" for="m3q2a">Porque el cifrado es demasiado lento para redes modernas.</label>
+                            <input class="form-check-input" type="radio" name="m3q2" value="a" id="m3q2a" required>
+                            <label class="form-check-label text-secondary" for="m3q2a">Porque el cifrado es más rápido.</label>
                         </div>
                         <div class="form-check mb-2">
-                            <input class="form-check-input border-secondary bg-dark" type="radio" name="m3q2" value="b" id="m3q2b">
-                            <label class="form-check-label text-secondary" for="m3q2b">El cifrado protege el archivo si se pierde, el DLP evita que el usuario lo envíe a donde no debe.</label>
+                            <input class="form-check-input" type="radio" name="m3q2" value="b" id="m3q2b">
+                            <label class="form-check-label text-secondary" for="m3q2b">El cifrado protege el archivo si se pierde; el DLP evita que se envíe indebidamente.</label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input border-secondary bg-dark" type="radio" name="m3q2" value="c" id="m3q2c">
-                            <label class="form-check-label text-secondary" for="m3q2c">Porque el DLP encripta mejor que el AES.</label>
+                            <input class="form-check-input" type="radio" name="m3q2" value="c" id="m3q2c">
+                            <label class="form-check-label text-secondary" for="m3q2c">Porque el DLP encripta mejor.</label>
                         </div>
                     </div>
 
-                    <div class="mb-5 border-bottom border-dark pb-4">
-                        <label class="text-white mb-3 fw-bold fs-5"><span class="text-secondary fs-6 me-2">03.</span> En una arquitectura de red, ¿en qué punto colocarías un sensor de DLP para monitorear "Data in Motion"?</label>
+                    <div class="mb-5 border-bottom border-secondary border-opacity-25 pb-4">
+                        <label class="text-white mb-3 fw-bold fs-5"><span class="brand-accent fs-6 me-2">03.</span> ¿Dónde colocarías un sensor para monitorear "Data in Motion"?</label>
                         <div class="form-check mb-2">
-                            <input class="form-check-input border-secondary bg-dark" type="radio" name="m3q3" value="a" id="m3q3a" required>
-                            <label class="form-check-label text-secondary" for="m3q3a">En el puerto USB del empleado.</label>
+                            <input class="form-check-input" type="radio" name="m3q3" value="a" id="m3q3a" required>
+                            <label class="form-check-label text-secondary" for="m3q3a">En el puerto USB.</label>
                         </div>
                         <div class="form-check mb-2">
-                            <input class="form-check-input border-secondary bg-dark" type="radio" name="m3q3" value="b" id="m3q3b">
+                            <input class="form-check-input" type="radio" name="m3q3" value="b" id="m3q3b">
                             <label class="form-check-label text-secondary" for="m3q3b">En la base de datos SQL.</label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input border-secondary bg-dark" type="radio" name="m3q3" value="c" id="m3q3c">
-                            <label class="form-check-label text-secondary" for="m3q3c">Cerca del firewall inspeccionando tráfico web y correo saliente.</label>
+                            <input class="form-check-input" type="radio" name="m3q3" value="c" id="m3q3c">
+                            <label class="form-check-label text-secondary" for="m3q3c">Cerca del firewall inspeccionando red saliente.</label>
                         </div>
                     </div>
 
-                    <div class="mb-5 border-bottom border-dark pb-4">
-                        <label class="text-white mb-3 fw-bold fs-5"><span class="text-secondary fs-6 me-2">04.</span> ¿Qué es el "Shadow IT"?</label>
+                    <div class="mb-5 border-bottom border-secondary border-opacity-25 pb-4">
+                        <label class="text-white mb-3 fw-bold fs-5"><span class="brand-accent fs-6 me-2">04.</span> ¿Qué es el "Shadow IT"?</label>
                         <div class="form-check mb-2">
-                            <input class="form-check-input border-secondary bg-dark" type="radio" name="m3q4" value="a" id="m3q4a" required>
-                            <label class="form-check-label text-secondary" for="m3q4a">Un grupo de hackers en la Dark Web.</label>
+                            <input class="form-check-input" type="radio" name="m3q4" value="a" id="m3q4a" required>
+                            <label class="form-check-label text-secondary" for="m3q4a">Hackers infiltrados en la red.</label>
                         </div>
                         <div class="form-check mb-2">
-                            <input class="form-check-input border-secondary bg-dark" type="radio" name="m3q4" value="b" id="m3q4b">
-                            <label class="form-check-label text-secondary" for="m3q4b">El uso de aplicaciones no autorizadas por el departamento de IT (ej. Dropbox personal).</label>
+                            <input class="form-check-input" type="radio" name="m3q4" value="b" id="m3q4b">
+                            <label class="form-check-label text-secondary" for="m3q4b">Uso de aplicaciones no autorizadas por el departamento de IT.</label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input border-secondary bg-dark" type="radio" name="m3q4" value="c" id="m3q4c">
-                            <label class="form-check-label text-secondary" for="m3q4c">Computadoras apagadas o en modo sombra en la red.</label>
+                            <input class="form-check-input" type="radio" name="m3q4" value="c" id="m3q4c">
+                            <label class="form-check-label text-secondary" for="m3q4c">Computadoras sin antivirus.</label>
                         </div>
                     </div>
 
-                    <div class="mb-5 border-bottom border-dark pb-4">
-                        <label class="text-white mb-3 fw-bold fs-5"><span class="text-secondary fs-6 me-2">05.</span> ¿Qué técnica DLP crea un hash de un documento maestro original para detectar fragmentos filtrados?</label>
+                    <div class="mb-5 pb-2">
+                        <label class="text-white mb-3 fw-bold fs-5"><span class="brand-accent fs-6 me-2">05.</span> ¿Qué técnica DLP utiliza hashes de documentos maestros?</label>
                         <div class="form-check mb-2">
-                            <input class="form-check-input border-secondary bg-dark" type="radio" name="m3q5" value="a" id="m3q5a" required>
-                            <label class="form-check-label text-secondary" for="m3q5a">Exact Data Matching (EDM)</label>
+                            <input class="form-check-input" type="radio" name="m3q5" value="a" id="m3q5a" required>
+                            <label class="form-check-label text-secondary" for="m3q5a">Exact Data Matching.</label>
                         </div>
                         <div class="form-check mb-2">
-                            <input class="form-check-input border-secondary bg-dark" type="radio" name="m3q5" value="b" id="m3q5b">
-                            <label class="form-check-label text-secondary" for="m3q5b">Fingerprinting (Huella Digital)</label>
+                            <input class="form-check-input" type="radio" name="m3q5" value="b" id="m3q5b">
+                            <label class="form-check-label text-secondary" for="m3q5b">Fingerprinting (Huella Digital).</label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input border-secondary bg-dark" type="radio" name="m3q5" value="c" id="m3q5c">
-                            <label class="form-check-label text-secondary" for="m3q5c">Expresiones Regulares (RegEx)</label>
+                            <input class="form-check-input" type="radio" name="m3q5" value="c" id="m3q5c">
+                            <label class="form-check-label text-secondary" for="m3q5c">RegEx.</label>
                         </div>
                     </div>
 
-                    <div class="text-center mt-5">
-                        <button type="submit" class="btn btn-cyber px-5 py-3 fs-5 w-100 w-md-auto">Calificar Módulo</button>
+                    <div class="text-center mt-2">
+                        <button type="submit" class="btn btn-cyber px-5 py-3 fs-5 w-100 w-md-auto"><i class="bi bi-send-check-fill me-2"></i> Calificar Módulo 3</button>
                     </div>
                 </form>
                 
@@ -336,13 +289,13 @@
 
     </main>
 
-    <footer class="text-center py-4 border-top mt-auto" style="border-color: var(--border-color) !important; background-color: var(--bg-main);">
-        <div class="container">
-            <p class="text-secondary small mb-0">&copy; 2026 DataSec Academy - Proyecto de Seguridad de la Información. Uso exclusivo educacional.</p>
+    <footer class="footer-site mt-auto">
+        <div class="container text-center">
+            <p class="text-muted tiny font-monospace mb-0">&copy; 2026 DataSec Academy - Seguridad de la Información BUAP.</p>
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>
