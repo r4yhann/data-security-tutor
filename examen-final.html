@@ -3,9 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="DataSec Academy - Examen Final Global de Certificación en Seguridad y Gestión de Datos.">
+    <meta name="theme-color" content="#0a0a0a">
+    <meta name="google-adsense-account" content="ca-pub-4661208062394859">
+    
     <title>Examen Final | DataSec Academy</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link rel="icon" type="image/png" href="favicon.png?v=2">
+
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4661208062394859" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -14,153 +24,370 @@
         <div class="container">
             <a class="navbar-brand" href="index.html">DataSec<span class="brand-accent">.Academy</span></a>
             <div class="d-flex ms-auto">
-                <a href="index.html" class="btn btn-outline-cyber btn-sm"><i class="bi bi-house-door"></i> Salir al Inicio</a>
+                <a href="index.html" class="btn btn-outline-cyber btn-sm px-3"><i class="bi bi-house-door-fill me-2"></i> Salir al Inicio</a>
             </div>
         </div>
     </nav>
 
     <header class="container py-5 mt-4 text-center reveal">
-        <i class="bi bi-award text-brand-accent" style="font-size: 4rem;"></i>
+        <i class="bi bi-award-fill text-secondary mb-3 d-inline-block" style="font-size: 4.5rem; text-shadow: 0 0 20px rgba(255,255,255,0.1);"></i>
         <h1 class="display-4 fw-bold text-white mb-3">Examen Final de <span class="brand-accent">Certificación</span></h1>
-        <p class="lead text-secondary mx-auto" style="max-width: 800px;">
-            Pon a prueba todo lo aprendido en los 4 módulos. Responde correctamente al menos 16 de las 20 preguntas para obtener tu validación como conocedor experto.
+        <p class="lead text-secondary mx-auto max-w-600">
+            Pon a prueba todo lo aprendido en los 4 módulos. Responde correctamente al menos 16 de las 20 preguntas para obtener tu validación como conocedor experto en seguridad de la información.
         </p>
     </header>
 
     <main class="container mb-5 reveal">
-        <div class="p-4 p-md-5 rounded border border-secondary" style="background-color: var(--bg-surface);">
+        
+        <div class="p-4 p-md-5 rounded border border-secondary border-opacity-50 bg-dark">
             <form id="quiz-form-final">
                 
-                <h4 class="text-brand-accent border-bottom border-dark pb-2 mb-4">Módulo 1: Gestión de Datos</h4>
-                <div class="mb-4">
-                    <label class="text-white fw-bold mb-2">01. ¿Cuáles son los tres principios de la Tríada CIA?</label>
-                    <div class="form-check"><input class="form-check-input bg-dark border-secondary" type="radio" name="fq1" value="a" required> <label class="text-secondary">Confidencialidad, Inteligencia, Autenticidad</label></div>
-                    <div class="form-check"><input class="form-check-input bg-dark border-secondary" type="radio" name="fq1" value="b"> <label class="text-secondary">Confidencialidad, Integridad, Disponibilidad</label></div>
-                    <div class="form-check"><input class="form-check-input bg-dark border-secondary" type="radio" name="fq1" value="c"> <label class="text-secondary">Control, Integridad, Distribución</label></div>
-                </div>
-                <div class="mb-4">
-                    <label class="text-white fw-bold mb-2">02. ¿Cuál es el objetivo del control de acceso RBAC?</label>
-                    <div class="form-check"><input class="form-check-input bg-dark border-secondary" type="radio" name="fq2" value="a" required> <label class="text-secondary">Asignar permisos por IP.</label></div>
-                    <div class="form-check"><input class="form-check-input bg-dark border-secondary" type="radio" name="fq2" value="b"> <label class="text-secondary">Ligar permisos a roles para escalar eficientemente.</label></div>
-                    <div class="form-check"><input class="form-check-input bg-dark border-secondary" type="radio" name="fq2" value="c"> <label class="text-secondary">Eliminar el uso de contraseñas.</label></div>
-                </div>
-                <div class="mb-4">
-                    <label class="text-white fw-bold mb-2">03. ¿Qué concepto impide que un usuario niegue haber realizado una acción?</label>
-                    <div class="form-check"><input class="form-check-input bg-dark border-secondary" type="radio" name="fq3" value="a" required> <label class="text-secondary">Escalada de Privilegios</label></div>
-                    <div class="form-check"><input class="form-check-input bg-dark border-secondary" type="radio" name="fq3" value="b"> <label class="text-secondary">Autenticación Biométrica</label></div>
-                    <div class="form-check"><input class="form-check-input bg-dark border-secondary" type="radio" name="fq3" value="c"> <label class="text-secondary">No Repudio</label></div>
-                </div>
-                <div class="mb-4">
-                    <label class="text-white fw-bold mb-2">04. ¿Qué marco normativo mexicano rige los datos en posesión de particulares?</label>
-                    <div class="form-check"><input class="form-check-input bg-dark border-secondary" type="radio" name="fq4" value="a" required> <label class="text-secondary">GDPR</label></div>
-                    <div class="form-check"><input class="form-check-input bg-dark border-secondary" type="radio" name="fq4" value="b"> <label class="text-secondary">LFPDPPP</label></div>
-                    <div class="form-check"><input class="form-check-input bg-dark border-secondary" type="radio" name="fq4" value="c"> <label class="text-secondary">HIPAA</label></div>
-                </div>
                 <div class="mb-5">
-                    <label class="text-white fw-bold mb-2">05. ¿Qué dicta el Principio de Menor Privilegio (PoLP)?</label>
-                    <div class="form-check"><input class="form-check-input bg-dark border-secondary" type="radio" name="fq5" value="a" required> <label class="text-secondary">Solo el root tiene contraseñas.</label></div>
-                    <div class="form-check"><input class="form-check-input bg-dark border-secondary" type="radio" name="fq5" value="b"> <label class="text-secondary">Asignar solo los privilegios mínimos necesarios para una tarea.</label></div>
-                    <div class="form-check"><input class="form-check-input bg-dark border-secondary" type="radio" name="fq5" value="c"> <label class="text-secondary">Los datos no deben tener cifrado.</label></div>
+                    <h4 class="text-white border-bottom border-secondary border-opacity-50 pb-3 mb-4 fw-bold">
+                        <i class="bi bi-1-square-fill text-secondary me-2"></i> Módulo 1: Gestión de Datos
+                    </h4>
+                    
+                    <div class="p-4 rounded border border-secondary border-opacity-25 bg-black mb-3">
+                        <label class="text-white fw-bold mb-3 fs-6">01. ¿Cuáles son los tres principios de la Tríada CIA?</label>
+                        <div class="form-check mb-2">
+                            <input class="form-check-input border-secondary bg-dark" type="radio" name="fq1" value="a" id="fq1a" required> 
+                            <label class="form-check-label text-secondary" for="fq1a">Confidencialidad, Inteligencia, Autenticidad</label>
+                        </div>
+                        <div class="form-check mb-2">
+                            <input class="form-check-input border-secondary bg-dark" type="radio" name="fq1" value="b" id="fq1b"> 
+                            <label class="form-check-label text-secondary" for="fq1b">Confidencialidad, Integridad, Disponibilidad</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input border-secondary bg-dark" type="radio" name="fq1" value="c" id="fq1c"> 
+                            <label class="form-check-label text-secondary" for="fq1c">Control, Integridad, Distribución</label>
+                        </div>
+                    </div>
+
+                    <div class="p-4 rounded border border-secondary border-opacity-25 bg-black mb-3">
+                        <label class="text-white fw-bold mb-3 fs-6">02. ¿Cuál es el objetivo del control de acceso RBAC?</label>
+                        <div class="form-check mb-2">
+                            <input class="form-check-input border-secondary bg-dark" type="radio" name="fq2" value="a" id="fq2a" required> 
+                            <label class="form-check-label text-secondary" for="fq2a">Asignar permisos por IP.</label>
+                        </div>
+                        <div class="form-check mb-2">
+                            <input class="form-check-input border-secondary bg-dark" type="radio" name="fq2" value="b" id="fq2b"> 
+                            <label class="form-check-label text-secondary" for="fq2b">Ligar permisos a roles para escalar eficientemente.</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input border-secondary bg-dark" type="radio" name="fq2" value="c" id="fq2c"> 
+                            <label class="form-check-label text-secondary" for="fq2c">Eliminar el uso de contraseñas.</label>
+                        </div>
+                    </div>
+
+                    <div class="p-4 rounded border border-secondary border-opacity-25 bg-black mb-3">
+                        <label class="text-white fw-bold mb-3 fs-6">03. ¿Qué concepto impide que un usuario niegue haber realizado una acción?</label>
+                        <div class="form-check mb-2">
+                            <input class="form-check-input border-secondary bg-dark" type="radio" name="fq3" value="a" id="fq3a" required> 
+                            <label class="form-check-label text-secondary" for="fq3a">Escalada de Privilegios</label>
+                        </div>
+                        <div class="form-check mb-2">
+                            <input class="form-check-input border-secondary bg-dark" type="radio" name="fq3" value="b" id="fq3b"> 
+                            <label class="form-check-label text-secondary" for="fq3b">Autenticación Biométrica</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input border-secondary bg-dark" type="radio" name="fq3" value="c" id="fq3c"> 
+                            <label class="form-check-label text-secondary" for="fq3c">No Repudio</label>
+                        </div>
+                    </div>
+
+                    <div class="p-4 rounded border border-secondary border-opacity-25 bg-black mb-3">
+                        <label class="text-white fw-bold mb-3 fs-6">04. ¿Qué marco normativo mexicano rige los datos en posesión de particulares?</label>
+                        <div class="form-check mb-2">
+                            <input class="form-check-input border-secondary bg-dark" type="radio" name="fq4" value="a" id="fq4a" required> 
+                            <label class="form-check-label text-secondary" for="fq4a">GDPR</label>
+                        </div>
+                        <div class="form-check mb-2">
+                            <input class="form-check-input border-secondary bg-dark" type="radio" name="fq4" value="b" id="fq4b"> 
+                            <label class="form-check-label text-secondary" for="fq4b">LFPDPPP</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input border-secondary bg-dark" type="radio" name="fq4" value="c" id="fq4c"> 
+                            <label class="form-check-label text-secondary" for="fq4c">HIPAA</label>
+                        </div>
+                    </div>
+
+                    <div class="p-4 rounded border border-secondary border-opacity-25 bg-black">
+                        <label class="text-white fw-bold mb-3 fs-6">05. ¿Qué dicta el Principio de Menor Privilegio (PoLP)?</label>
+                        <div class="form-check mb-2">
+                            <input class="form-check-input border-secondary bg-dark" type="radio" name="fq5" value="a" id="fq5a" required> 
+                            <label class="form-check-label text-secondary" for="fq5a">Solo el root tiene contraseñas.</label>
+                        </div>
+                        <div class="form-check mb-2">
+                            <input class="form-check-input border-secondary bg-dark" type="radio" name="fq5" value="b" id="fq5b"> 
+                            <label class="form-check-label text-secondary" for="fq5b">Asignar solo los privilegios mínimos necesarios para una tarea.</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input border-secondary bg-dark" type="radio" name="fq5" value="c" id="fq5c"> 
+                            <label class="form-check-label text-secondary" for="fq5c">Los datos no deben tener cifrado.</label>
+                        </div>
+                    </div>
                 </div>
 
-                <h4 class="text-brand-accent border-bottom border-dark pb-2 mb-4 mt-5">Módulo 2: Destrucción de Datos</h4>
-                <div class="mb-4">
-                    <label class="text-white fw-bold mb-2">06. A nivel de sistema de archivos, al borrar un archivo...</label>
-                    <div class="form-check"><input class="form-check-input bg-dark border-secondary" type="radio" name="fq6" value="a" required> <label class="text-secondary">Se destruyen los sectores físicamente.</label></div>
-                    <div class="form-check"><input class="form-check-input bg-dark border-secondary" type="radio" name="fq6" value="b"> <label class="text-secondary">Solo se elimina el puntero en la MFT; los datos quedan.</label></div>
-                    <div class="form-check"><input class="form-check-input bg-dark border-secondary" type="radio" name="fq6" value="c"> <label class="text-secondary">Se encripta en la papelera.</label></div>
-                </div>
-                <div class="mb-4">
-                    <label class="text-white fw-bold mb-2">07. ¿Cuál es el riesgo del "Wear Leveling" en SSDs al intentar borrar datos?</label>
-                    <div class="form-check"><input class="form-check-input bg-dark border-secondary" type="radio" name="fq7" value="a" required> <label class="text-secondary">Deja copias "fantasma" sin sobreescribir en celdas no visibles.</label></div>
-                    <div class="form-check"><input class="form-check-input bg-dark border-secondary" type="radio" name="fq7" value="b"> <label class="text-secondary">Genera campos magnéticos residuales.</label></div>
-                    <div class="form-check"><input class="form-check-input bg-dark border-secondary" type="radio" name="fq7" value="c"> <label class="text-secondary">El disco se sobrecalienta.</label></div>
-                </div>
-                <div class="mb-4">
-                    <label class="text-white fw-bold mb-2">08. El estándar de sobreescritura DoD 5220.22-M consiste en:</label>
-                    <div class="form-check"><input class="form-check-input bg-dark border-secondary" type="radio" name="fq8" value="a" required> <label class="text-secondary">Aplicar un pico de voltaje directo.</label></div>
-                    <div class="form-check"><input class="form-check-input bg-dark border-secondary" type="radio" name="fq8" value="b"> <label class="text-secondary">3 pasadas: ceros, unos, y un carácter aleatorio.</label></div>
-                    <div class="form-check"><input class="form-check-input bg-dark border-secondary" type="radio" name="fq8" value="c"> <label class="text-secondary">Eliminar la llave criptográfica.</label></div>
-                </div>
-                <div class="mb-4">
-                    <label class="text-white fw-bold mb-2">09. El método más rápido para sanitizar un disco moderno cifrado (SED) es:</label>
-                    <div class="form-check"><input class="form-check-input bg-dark border-secondary" type="radio" name="fq9" value="a" required> <label class="text-secondary">Desmagnetización masiva.</label></div>
-                    <div class="form-check"><input class="form-check-input bg-dark border-secondary" type="radio" name="fq9" value="b"> <label class="text-secondary">Formateo rápido en Windows.</label></div>
-                    <div class="form-check"><input class="form-check-input bg-dark border-secondary" type="radio" name="fq9" value="c"> <label class="text-secondary">Crypto-Erase (Destruir la Llave de Cifrado MEK).</label></div>
-                </div>
                 <div class="mb-5">
-                    <label class="text-white fw-bold mb-2">10. ¿Por qué NO usar un Desmagnetizador (Degausser) en un SSD?</label>
-                    <div class="form-check"><input class="form-check-input bg-dark border-secondary" type="radio" name="fq10" value="a" required> <label class="text-secondary">Explotan por temperatura.</label></div>
-                    <div class="form-check"><input class="form-check-input bg-dark border-secondary" type="radio" name="fq10" value="b"> <label class="text-secondary">Los SSD almacenan carga eléctrica, no magnética, siendo inmunes.</label></div>
-                    <div class="form-check"><input class="form-check-input bg-dark border-secondary" type="radio" name="fq10" value="c"> <label class="text-secondary">Rompe la garantía.</label></div>
+                    <h4 class="text-white border-bottom border-secondary border-opacity-50 pb-3 mb-4 fw-bold mt-5">
+                        <i class="bi bi-2-square-fill text-secondary me-2"></i> Módulo 2: Destrucción de Datos
+                    </h4>
+                    
+                    <div class="p-4 rounded border border-secondary border-opacity-25 bg-black mb-3">
+                        <label class="text-white fw-bold mb-3 fs-6">06. A nivel de sistema de archivos, al borrar un archivo...</label>
+                        <div class="form-check mb-2">
+                            <input class="form-check-input border-secondary bg-dark" type="radio" name="fq6" value="a" id="fq6a" required> 
+                            <label class="form-check-label text-secondary" for="fq6a">Se destruyen los sectores físicamente.</label>
+                        </div>
+                        <div class="form-check mb-2">
+                            <input class="form-check-input border-secondary bg-dark" type="radio" name="fq6" value="b" id="fq6b"> 
+                            <label class="form-check-label text-secondary" for="fq6b">Solo se elimina el puntero en la MFT; los datos quedan.</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input border-secondary bg-dark" type="radio" name="fq6" value="c" id="fq6c"> 
+                            <label class="form-check-label text-secondary" for="fq6c">Se encripta en la papelera.</label>
+                        </div>
+                    </div>
+
+                    <div class="p-4 rounded border border-secondary border-opacity-25 bg-black mb-3">
+                        <label class="text-white fw-bold mb-3 fs-6">07. ¿Cuál es el riesgo del "Wear Leveling" en SSDs al intentar borrar datos?</label>
+                        <div class="form-check mb-2">
+                            <input class="form-check-input border-secondary bg-dark" type="radio" name="fq7" value="a" id="fq7a" required> 
+                            <label class="form-check-label text-secondary" for="fq7a">Deja copias "fantasma" sin sobreescribir en celdas no visibles.</label>
+                        </div>
+                        <div class="form-check mb-2">
+                            <input class="form-check-input border-secondary bg-dark" type="radio" name="fq7" value="b" id="fq7b"> 
+                            <label class="form-check-label text-secondary" for="fq7b">Genera campos magnéticos residuales.</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input border-secondary bg-dark" type="radio" name="fq7" value="c" id="fq7c"> 
+                            <label class="form-check-label text-secondary" for="fq7c">El disco se sobrecalienta.</label>
+                        </div>
+                    </div>
+
+                    <div class="p-4 rounded border border-secondary border-opacity-25 bg-black mb-3">
+                        <label class="text-white fw-bold mb-3 fs-6">08. El estándar de sobreescritura DoD 5220.22-M consiste en:</label>
+                        <div class="form-check mb-2">
+                            <input class="form-check-input border-secondary bg-dark" type="radio" name="fq8" value="a" id="fq8a" required> 
+                            <label class="form-check-label text-secondary" for="fq8a">Aplicar un pico de voltaje directo.</label>
+                        </div>
+                        <div class="form-check mb-2">
+                            <input class="form-check-input border-secondary bg-dark" type="radio" name="fq8" value="b" id="fq8b"> 
+                            <label class="form-check-label text-secondary" for="fq8b">3 pasadas: ceros, unos, y un carácter aleatorio.</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input border-secondary bg-dark" type="radio" name="fq8" value="c" id="fq8c"> 
+                            <label class="form-check-label text-secondary" for="fq8c">Eliminar la llave criptográfica.</label>
+                        </div>
+                    </div>
+
+                    <div class="p-4 rounded border border-secondary border-opacity-25 bg-black mb-3">
+                        <label class="text-white fw-bold mb-3 fs-6">09. El método más rápido para sanitizar un disco moderno cifrado (SED) es:</label>
+                        <div class="form-check mb-2">
+                            <input class="form-check-input border-secondary bg-dark" type="radio" name="fq9" value="a" id="fq9a" required> 
+                            <label class="form-check-label text-secondary" for="fq9a">Desmagnetización masiva.</label>
+                        </div>
+                        <div class="form-check mb-2">
+                            <input class="form-check-input border-secondary bg-dark" type="radio" name="fq9" value="b" id="fq9b"> 
+                            <label class="form-check-label text-secondary" for="fq9b">Formateo rápido en Windows.</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input border-secondary bg-dark" type="radio" name="fq9" value="c" id="fq9c"> 
+                            <label class="form-check-label text-secondary" for="fq9c">Crypto-Erase (Destruir la Llave de Cifrado MEK).</label>
+                        </div>
+                    </div>
+
+                    <div class="p-4 rounded border border-secondary border-opacity-25 bg-black">
+                        <label class="text-white fw-bold mb-3 fs-6">10. ¿Por qué NO usar un Desmagnetizador (Degausser) en un SSD?</label>
+                        <div class="form-check mb-2">
+                            <input class="form-check-input border-secondary bg-dark" type="radio" name="fq10" value="a" id="fq10a" required> 
+                            <label class="form-check-label text-secondary" for="fq10a">Explotan por temperatura.</label>
+                        </div>
+                        <div class="form-check mb-2">
+                            <input class="form-check-input border-secondary bg-dark" type="radio" name="fq10" value="b" id="fq10b"> 
+                            <label class="form-check-label text-secondary" for="fq10b">Los SSD almacenan carga eléctrica, no magnética, siendo inmunes.</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input border-secondary bg-dark" type="radio" name="fq10" value="c" id="fq10c"> 
+                            <label class="form-check-label text-secondary" for="fq10c">Rompe la garantía.</label>
+                        </div>
+                    </div>
                 </div>
 
-                <h4 class="text-brand-accent border-bottom border-dark pb-2 mb-4 mt-5">Módulo 3: Prevención DLP</h4>
-                <div class="mb-4">
-                    <label class="text-white fw-bold mb-2">11. Diferencia entre falso positivo y falso negativo en DLP:</label>
-                    <div class="form-check"><input class="form-check-input bg-dark border-secondary" type="radio" name="fq11" value="a" required> <label class="text-secondary">Falso positivo detiene tráfico legítimo; Falso negativo permite fuga real.</label></div>
-                    <div class="form-check"><input class="form-check-input bg-dark border-secondary" type="radio" name="fq11" value="b"> <label class="text-secondary">Falso positivo es interno; Falso negativo es externo.</label></div>
-                    <div class="form-check"><input class="form-check-input bg-dark border-secondary" type="radio" name="fq11" value="c"> <label class="text-secondary">No hay diferencia práctica.</label></div>
-                </div>
-                <div class="mb-4">
-                    <label class="text-white fw-bold mb-2">12. Relación entre Cifrado y DLP:</label>
-                    <div class="form-check"><input class="form-check-input bg-dark border-secondary" type="radio" name="fq12" value="a" required> <label class="text-secondary">El cifrado es muy lento.</label></div>
-                    <div class="form-check"><input class="form-check-input bg-dark border-secondary" type="radio" name="fq12" value="b"> <label class="text-secondary">Cifrado protege si se pierde; DLP evita que se envíe a donde no debe.</label></div>
-                    <div class="form-check"><input class="form-check-input bg-dark border-secondary" type="radio" name="fq12" value="c"> <label class="text-secondary">DLP encripta mejor.</label></div>
-                </div>
-                <div class="mb-4">
-                    <label class="text-white fw-bold mb-2">13. Para monitorear "Data in Motion", un sensor de DLP va en:</label>
-                    <div class="form-check"><input class="form-check-input bg-dark border-secondary" type="radio" name="fq13" value="a" required> <label class="text-secondary">Puertos USB.</label></div>
-                    <div class="form-check"><input class="form-check-input bg-dark border-secondary" type="radio" name="fq13" value="b"> <label class="text-secondary">Base de datos SQL.</label></div>
-                    <div class="form-check"><input class="form-check-input bg-dark border-secondary" type="radio" name="fq13" value="c"> <label class="text-secondary">Cerca del firewall inspeccionando red saliente.</label></div>
-                </div>
-                <div class="mb-4">
-                    <label class="text-white fw-bold mb-2">14. ¿Qué es el "Shadow IT"?</label>
-                    <div class="form-check"><input class="form-check-input bg-dark border-secondary" type="radio" name="fq14" value="a" required> <label class="text-secondary">Hackers en Dark Web.</label></div>
-                    <div class="form-check"><input class="form-check-input bg-dark border-secondary" type="radio" name="fq14" value="b"> <label class="text-secondary">Uso de aplicaciones no autorizadas por IT (ej. Dropbox personal).</label></div>
-                    <div class="form-check"><input class="form-check-input bg-dark border-secondary" type="radio" name="fq14" value="c"> <label class="text-secondary">PCs apagadas en red.</label></div>
-                </div>
                 <div class="mb-5">
-                    <label class="text-white fw-bold mb-2">15. Técnica que crea un hash de un documento maestro para detectar filtraciones:</label>
-                    <div class="form-check"><input class="form-check-input bg-dark border-secondary" type="radio" name="fq15" value="a" required> <label class="text-secondary">Exact Data Matching</label></div>
-                    <div class="form-check"><input class="form-check-input bg-dark border-secondary" type="radio" name="fq15" value="b"> <label class="text-secondary">Fingerprinting (Huella Digital)</label></div>
-                    <div class="form-check"><input class="form-check-input bg-dark border-secondary" type="radio" name="fq15" value="c"> <label class="text-secondary">RegEx</label></div>
+                    <h4 class="text-white border-bottom border-secondary border-opacity-50 pb-3 mb-4 fw-bold mt-5">
+                        <i class="bi bi-3-square-fill text-secondary me-2"></i> Módulo 3: Prevención DLP
+                    </h4>
+                    
+                    <div class="p-4 rounded border border-secondary border-opacity-25 bg-black mb-3">
+                        <label class="text-white fw-bold mb-3 fs-6">11. Diferencia entre falso positivo y falso negativo en DLP:</label>
+                        <div class="form-check mb-2">
+                            <input class="form-check-input border-secondary bg-dark" type="radio" name="fq11" value="a" id="fq11a" required> 
+                            <label class="form-check-label text-secondary" for="fq11a">Falso positivo detiene tráfico legítimo; Falso negativo permite fuga real.</label>
+                        </div>
+                        <div class="form-check mb-2">
+                            <input class="form-check-input border-secondary bg-dark" type="radio" name="fq11" value="b" id="fq11b"> 
+                            <label class="form-check-label text-secondary" for="fq11b">Falso positivo es interno; Falso negativo es externo.</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input border-secondary bg-dark" type="radio" name="fq11" value="c" id="fq11c"> 
+                            <label class="form-check-label text-secondary" for="fq11c">No hay diferencia práctica.</label>
+                        </div>
+                    </div>
+
+                    <div class="p-4 rounded border border-secondary border-opacity-25 bg-black mb-3">
+                        <label class="text-white fw-bold mb-3 fs-6">12. Relación entre Cifrado y DLP:</label>
+                        <div class="form-check mb-2">
+                            <input class="form-check-input border-secondary bg-dark" type="radio" name="fq12" value="a" id="fq12a" required> 
+                            <label class="form-check-label text-secondary" for="fq12a">El cifrado es muy lento.</label>
+                        </div>
+                        <div class="form-check mb-2">
+                            <input class="form-check-input border-secondary bg-dark" type="radio" name="fq12" value="b" id="fq12b"> 
+                            <label class="form-check-label text-secondary" for="fq12b">Cifrado protege si se pierde; DLP evita que se envíe a donde no debe.</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input border-secondary bg-dark" type="radio" name="fq12" value="c" id="fq12c"> 
+                            <label class="form-check-label text-secondary" for="fq12c">DLP encripta mejor.</label>
+                        </div>
+                    </div>
+
+                    <div class="p-4 rounded border border-secondary border-opacity-25 bg-black mb-3">
+                        <label class="text-white fw-bold mb-3 fs-6">13. Para monitorear "Data in Motion", un sensor de DLP va en:</label>
+                        <div class="form-check mb-2">
+                            <input class="form-check-input border-secondary bg-dark" type="radio" name="fq13" value="a" id="fq13a" required> 
+                            <label class="form-check-label text-secondary" for="fq13a">Puertos USB.</label>
+                        </div>
+                        <div class="form-check mb-2">
+                            <input class="form-check-input border-secondary bg-dark" type="radio" name="fq13" value="b" id="fq13b"> 
+                            <label class="form-check-label text-secondary" for="fq13b">Base de datos SQL.</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input border-secondary bg-dark" type="radio" name="fq13" value="c" id="fq13c"> 
+                            <label class="form-check-label text-secondary" for="fq13c">Cerca del firewall inspeccionando red saliente.</label>
+                        </div>
+                    </div>
+
+                    <div class="p-4 rounded border border-secondary border-opacity-25 bg-black mb-3">
+                        <label class="text-white fw-bold mb-3 fs-6">14. ¿Qué es el "Shadow IT"?</label>
+                        <div class="form-check mb-2">
+                            <input class="form-check-input border-secondary bg-dark" type="radio" name="fq14" value="a" id="fq14a" required> 
+                            <label class="form-check-label text-secondary" for="fq14a">Hackers en Dark Web.</label>
+                        </div>
+                        <div class="form-check mb-2">
+                            <input class="form-check-input border-secondary bg-dark" type="radio" name="fq14" value="b" id="fq14b"> 
+                            <label class="form-check-label text-secondary" for="fq14b">Uso de aplicaciones no autorizadas por IT (ej. Dropbox personal).</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input border-secondary bg-dark" type="radio" name="fq14" value="c" id="fq14c"> 
+                            <label class="form-check-label text-secondary" for="fq14c">PCs apagadas en red.</label>
+                        </div>
+                    </div>
+
+                    <div class="p-4 rounded border border-secondary border-opacity-25 bg-black">
+                        <label class="text-white fw-bold mb-3 fs-6">15. Técnica que crea un hash de un documento maestro para detectar filtraciones:</label>
+                        <div class="form-check mb-2">
+                            <input class="form-check-input border-secondary bg-dark" type="radio" name="fq15" value="a" id="fq15a" required> 
+                            <label class="form-check-label text-secondary" for="fq15a">Exact Data Matching</label>
+                        </div>
+                        <div class="form-check mb-2">
+                            <input class="form-check-input border-secondary bg-dark" type="radio" name="fq15" value="b" id="fq15b"> 
+                            <label class="form-check-label text-secondary" for="fq15b">Fingerprinting (Huella Digital)</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input border-secondary bg-dark" type="radio" name="fq15" value="c" id="fq15c"> 
+                            <label class="form-check-label text-secondary" for="fq15c">RegEx</label>
+                        </div>
+                    </div>
                 </div>
 
-                <h4 class="text-brand-accent border-bottom border-dark pb-2 mb-4 mt-5">Módulo 4: Privacidad y Ética</h4>
-                <div class="mb-4">
-                    <label class="text-white fw-bold mb-2">16. Diferencia entre Seguridad y Privacidad:</label>
-                    <div class="form-check"><input class="form-check-input bg-dark border-secondary" type="radio" name="fq16" value="a" required> <label class="text-secondary">Son exactamente lo mismo.</label></div>
-                    <div class="form-check"><input class="form-check-input bg-dark border-secondary" type="radio" name="fq16" value="b"> <label class="text-secondary">Seguridad protege contra ataques; Privacidad dicta el uso ético y legal.</label></div>
-                    <div class="form-check"><input class="form-check-input bg-dark border-secondary" type="radio" name="fq16" value="c"> <label class="text-secondary">Privacidad es solo para datos públicos.</label></div>
-                </div>
-                <div class="mb-4">
-                    <label class="text-white fw-bold mb-2">17. Ejemplo de "Dato Sensible":</label>
-                    <div class="form-check"><input class="form-check-input bg-dark border-secondary" type="radio" name="fq17" value="a" required> <label class="text-secondary">Dirección IP pública.</label></div>
-                    <div class="form-check"><input class="form-check-input bg-dark border-secondary" type="radio" name="fq17" value="b"> <label class="text-secondary">Correo de trabajo.</label></div>
-                    <div class="form-check"><input class="form-check-input bg-dark border-secondary" type="radio" name="fq17" value="c"> <label class="text-secondary">Afiliación política o salud.</label></div>
-                </div>
-                <div class="mb-4">
-                    <label class="text-white fw-bold mb-2">18. En Privacy by Design, "Minimización" significa:</label>
-                    <div class="form-check"><input class="form-check-input bg-dark border-secondary" type="radio" name="fq18" value="a" required> <label class="text-secondary">Comprimir archivos (.zip).</label></div>
-                    <div class="form-check"><input class="form-check-input bg-dark border-secondary" type="radio" name="fq18" value="b"> <label class="text-secondary">Recolectar única y estrictamente los datos necesarios.</label></div>
-                    <div class="form-check"><input class="form-check-input bg-dark border-secondary" type="radio" name="fq18" value="c"> <label class="text-secondary">Textos legales cortos.</label></div>
-                </div>
-                <div class="mb-4">
-                    <label class="text-white fw-bold mb-2">19. En los derechos ARCO, "Cancelación" permite:</label>
-                    <div class="form-check"><input class="form-check-input bg-dark border-secondary" type="radio" name="fq19" value="a" required> <label class="text-secondary">Cancelar correos de spam.</label></div>
-                    <div class="form-check"><input class="form-check-input bg-dark border-secondary" type="radio" name="fq19" value="b"> <label class="text-secondary">Que los datos sean eliminados cuando ya no cumplan su fin.</label></div>
-                    <div class="form-check"><input class="form-check-input bg-dark border-secondary" type="radio" name="fq19" value="c"> <label class="text-secondary">Eliminar la cuenta pero dejar datos en el servidor.</label></div>
-                </div>
-                <div class="mb-4">
-                    <label class="text-white fw-bold mb-2">20. Diferencia entre Anonimización y Seudonimización:</label>
-                    <div class="form-check"><input class="form-check-input bg-dark border-secondary" type="radio" name="fq20" value="a" required> <label class="text-secondary">Son el mismo proceso legal.</label></div>
-                    <div class="form-check"><input class="form-check-input bg-dark border-secondary" type="radio" name="fq20" value="b"> <label class="text-secondary">Anonimizar es irreversible; Seudonimizar usa códigos reversibles con una llave.</label></div>
-                    <div class="form-check"><input class="form-check-input bg-dark border-secondary" type="radio" name="fq20" value="c"> <label class="text-secondary">La Seudonimización es irreversible.</label></div>
+                <div class="mb-5">
+                    <h4 class="text-white border-bottom border-secondary border-opacity-50 pb-3 mb-4 fw-bold mt-5">
+                        <i class="bi bi-4-square-fill text-secondary me-2"></i> Módulo 4: Privacidad y Ética
+                    </h4>
+                    
+                    <div class="p-4 rounded border border-secondary border-opacity-25 bg-black mb-3">
+                        <label class="text-white fw-bold mb-3 fs-6">16. Diferencia entre Seguridad y Privacidad:</label>
+                        <div class="form-check mb-2">
+                            <input class="form-check-input border-secondary bg-dark" type="radio" name="fq16" value="a" id="fq16a" required> 
+                            <label class="form-check-label text-secondary" for="fq16a">Son exactamente lo mismo.</label>
+                        </div>
+                        <div class="form-check mb-2">
+                            <input class="form-check-input border-secondary bg-dark" type="radio" name="fq16" value="b" id="fq16b"> 
+                            <label class="form-check-label text-secondary" for="fq16b">Seguridad protege contra ataques; Privacidad dicta el uso ético y legal.</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input border-secondary bg-dark" type="radio" name="fq16" value="c" id="fq16c"> 
+                            <label class="form-check-label text-secondary" for="fq16c">Privacidad es solo para datos públicos.</label>
+                        </div>
+                    </div>
+
+                    <div class="p-4 rounded border border-secondary border-opacity-25 bg-black mb-3">
+                        <label class="text-white fw-bold mb-3 fs-6">17. Ejemplo de "Dato Sensible":</label>
+                        <div class="form-check mb-2">
+                            <input class="form-check-input border-secondary bg-dark" type="radio" name="fq17" value="a" id="fq17a" required> 
+                            <label class="form-check-label text-secondary" for="fq17a">Dirección IP pública.</label>
+                        </div>
+                        <div class="form-check mb-2">
+                            <input class="form-check-input border-secondary bg-dark" type="radio" name="fq17" value="b" id="fq17b"> 
+                            <label class="form-check-label text-secondary" for="fq17b">Correo de trabajo.</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input border-secondary bg-dark" type="radio" name="fq17" value="c" id="fq17c"> 
+                            <label class="form-check-label text-secondary" for="fq17c">Afiliación política o salud.</label>
+                        </div>
+                    </div>
+
+                    <div class="p-4 rounded border border-secondary border-opacity-25 bg-black mb-3">
+                        <label class="text-white fw-bold mb-3 fs-6">18. En Privacy by Design, "Minimización" significa:</label>
+                        <div class="form-check mb-2">
+                            <input class="form-check-input border-secondary bg-dark" type="radio" name="fq18" value="a" id="fq18a" required> 
+                            <label class="form-check-label text-secondary" for="fq18a">Comprimir archivos (.zip).</label>
+                        </div>
+                        <div class="form-check mb-2">
+                            <input class="form-check-input border-secondary bg-dark" type="radio" name="fq18" value="b" id="fq18b"> 
+                            <label class="form-check-label text-secondary" for="fq18b">Recolectar única y estrictamente los datos necesarios.</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input border-secondary bg-dark" type="radio" name="fq18" value="c" id="fq18c"> 
+                            <label class="form-check-label text-secondary" for="fq18c">Textos legales cortos.</label>
+                        </div>
+                    </div>
+
+                    <div class="p-4 rounded border border-secondary border-opacity-25 bg-black mb-3">
+                        <label class="text-white fw-bold mb-3 fs-6">19. En los derechos ARCO, "Cancelación" permite:</label>
+                        <div class="form-check mb-2">
+                            <input class="form-check-input border-secondary bg-dark" type="radio" name="fq19" value="a" id="fq19a" required> 
+                            <label class="form-check-label text-secondary" for="fq19a">Cancelar correos de spam.</label>
+                        </div>
+                        <div class="form-check mb-2">
+                            <input class="form-check-input border-secondary bg-dark" type="radio" name="fq19" value="b" id="fq19b"> 
+                            <label class="form-check-label text-secondary" for="fq19b">Que los datos sean eliminados cuando ya no cumplan su fin.</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input border-secondary bg-dark" type="radio" name="fq19" value="c" id="fq19c"> 
+                            <label class="form-check-label text-secondary" for="fq19c">Eliminar la cuenta pero dejar datos en el servidor.</label>
+                        </div>
+                    </div>
+
+                    <div class="p-4 rounded border border-secondary border-opacity-25 bg-black">
+                        <label class="text-white fw-bold mb-3 fs-6">20. Diferencia entre Anonimización y Seudonimización:</label>
+                        <div class="form-check mb-2">
+                            <input class="form-check-input border-secondary bg-dark" type="radio" name="fq20" value="a" id="fq20a" required> 
+                            <label class="form-check-label text-secondary" for="fq20a">Son el mismo proceso legal.</label>
+                        </div>
+                        <div class="form-check mb-2">
+                            <input class="form-check-input border-secondary bg-dark" type="radio" name="fq20" value="b" id="fq20b"> 
+                            <label class="form-check-label text-secondary" for="fq20b">Anonimizar es irreversible; Seudonimizar usa códigos reversibles con una llave.</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input border-secondary bg-dark" type="radio" name="fq20" value="c" id="fq20c"> 
+                            <label class="form-check-label text-secondary" for="fq20c">La Seudonimización es irreversible.</label>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="text-center mt-5 pt-3 border-top border-dark">
-                    <button type="submit" class="btn btn-cyber px-5 py-4 fs-4 w-100"><i class="bi bi-shield-check me-2"></i> Evaluar Certificación Global</button>
+                <div class="text-center mt-5 pt-4 border-top border-secondary border-opacity-50">
+                    <button type="submit" class="btn btn-cyber px-5 py-3 fs-5 w-100 w-md-auto"><i class="bi bi-shield-check me-2"></i> Evaluar Certificación Global</button>
                 </div>
             </form>
             
@@ -168,13 +395,13 @@
         </div>
     </main>
 
-    <footer class="text-center py-4 border-top mt-auto" style="border-color: var(--border-color) !important; background-color: var(--bg-main);">
-        <div class="container">
-            <p class="text-secondary small mb-0">&copy; 2026 DataSec Academy - Proyecto de Seguridad de la Información.</p>
+    <footer class="footer-site mt-auto">
+        <div class="container text-center">
+            <p class="text-muted tiny font-monospace mb-0">&copy; 2026 DataSec Academy - Proyecto de Seguridad de la Información BUAP.</p>
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>
