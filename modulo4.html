@@ -3,14 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="DataSec Academy - Módulo 4: Privacidad de Datos y Ética Digital. Normativas, Derechos ARCO y Desidentificación.">
+    <meta name="theme-color" content="#0a0a0a">
     <meta name="google-adsense-account" content="ca-pub-4661208062394859">
+    
     <title>Módulo 4: Privacidad de Datos | DataSec Academy</title>
     
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4661208062394859"
-     crossorigin="anonymous"></script>
+    <link rel="icon" type="image/png" href="favicon.png?v=2">
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4661208062394859" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -19,15 +24,15 @@
         <div class="container">
             <a class="navbar-brand" href="index.html">DataSec<span class="brand-accent">.Academy</span></a>
             <div class="d-flex ms-auto">
-                <a href="index.html" class="btn btn-outline-cyber btn-sm"><i class="bi bi-arrow-left"></i> Volver al Dashboard</a>
+                <a href="index.html" class="btn btn-outline-cyber btn-sm px-3"><i class="bi bi-arrow-left me-2"></i> Volver al Dashboard</a>
             </div>
         </div>
     </nav>
 
-    <header class="container py-5 mt-4 reveal">
-        <div class="module-badge mb-3">TEMA 3.4</div>
+    <header class="container py-5 mt-4 reveal text-center">
+        <div class="module-badge mb-3 mx-auto">MÓDULO 4</div>
         <h1 class="display-4 fw-bold text-white mb-3">Privacidad de Datos y <span class="brand-accent">Ética Digital</span></h1>
-        <p class="lead text-secondary" style="max-width: 900px;">
+        <p class="lead text-secondary mx-auto">
             Mientras la seguridad se enfoca en proteger el dato contra ataques, la privacidad se enfoca en los derechos del individuo sobre su propia información y el uso ético de la misma en la era del Big Data.
         </p>
     </header>
@@ -38,40 +43,45 @@
             <h2 class="fw-bold text-white mb-4 border-bottom border-secondary pb-2"><span class="brand-accent">#</span> Hoja 1: El Derecho a la Privacidad en la Era del Big Data</h2>
             
             <h4 class="text-white mt-4">1.1 Definición de Privacidad vs. Seguridad</h4>
-            <p class="text-secondary text-justify">
-                Es común confundir estos términos, pero en la gestión de datos son conceptos distintos aunque íntimamente complementarios. La <strong>Seguridad</strong> es el "muro" (cifrado, firewalls, controles de acceso) que protege la información de intrusos. La <strong>Privacidad</strong> es el conjunto de reglas y normativas que deciden quién tiene derecho a estar detrás de ese muro y qué puede hacer legalmente con lo que encuentre allí. Un sistema puede ser técnicamente inquebrantable (seguro) pero violar la privacidad flagrantemente (por ejemplo, si la empresa vende tus datos de navegación a terceros sin tu consentimiento explícito).
+            <p class="text-secondary">
+                Es común confundir estos términos, pero en la gestión de datos son conceptos distintos aunque íntimamente complementarios. La <strong class="text-white">Seguridad</strong> es el "muro" (cifrado, firewalls, controles de acceso) que protege la información de intrusos. La <strong class="text-white">Privacidad</strong> es el conjunto de reglas y normativas que deciden quién tiene derecho a estar detrás de ese muro y qué puede hacer legalmente con lo que encuentre allí. Un sistema puede ser técnicamente inquebrantable (seguro) pero violar la privacidad flagrantemente (por ejemplo, si la empresa vende tus datos de navegación a terceros sin tu consentimiento explícito).
             </p>
 
             <h4 class="text-white mt-5">1.2 El Dato Personal y Sensible</h4>
             <p class="text-secondary mb-4">Para gestionar la privacidad, primero debemos identificar la taxonomía de lo que estamos protegiendo. Según marcos internacionales (GDPR y LFPDPPP):</p>
-            <div class="row g-4 mb-4">
+            
+            <div class="row g-4 mb-5">
                 <div class="col-md-6">
-                    <div class="p-4 rounded border border-secondary h-100 bg-dark border-start border-3 border-info">
-                        <h5 class="text-white fw-bold">Dato Personal</h5>
-                        <p class="text-secondary small mt-2">Cualquier información concerniente a una persona física identificada o identificable. Esto incluye el nombre, correo electrónico, número de teléfono, dirección IP de navegación, y datos de geolocalización.</p>
+                    <div class="p-4 border border-info rounded h-100 bg-info bg-opacity-10 transition-hover">
+                        <h5 class="text-info fw-bold"><i class="bi bi-person-badge-fill me-2"></i> Dato Personal</h5>
+                        <p class="text-white small mt-2 mb-0">Cualquier información concerniente a una persona física identificada o identificable. Esto incluye el nombre, correo electrónico, número de teléfono, dirección IP de navegación, y datos de geolocalización.</p>
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <div class="p-4 rounded border border-secondary h-100 bg-dark border-start border-3 border-danger">
-                        <h5 class="text-white fw-bold">Dato Personal Sensible</h5>
-                        <p class="text-secondary small mt-2">Información que afecta la esfera más íntima del titular o cuya utilización indebida pueda dar origen a discriminación. Ejemplos: preferencias sexuales, estado de salud, creencias religiosas, origen étnico, opiniones políticas y datos biométricos. Requieren cifrado obligatorio y consentimiento expreso por escrito.</p>
+                    <div class="p-4 border border-danger rounded h-100 bg-danger bg-opacity-10 transition-hover">
+                        <h5 class="text-danger fw-bold"><i class="bi bi-heart-pulse-fill me-2"></i> Dato Personal Sensible</h5>
+                        <p class="text-white small mt-2 mb-0">Información que afecta la esfera más íntima del titular o cuya utilización indebida pueda dar origen a discriminación. Ejemplos: preferencias sexuales, estado de salud, creencias religiosas, origen étnico y datos biométricos. Requieren cifrado obligatorio y consentimiento expreso.</p>
                     </div>
                 </div>
             </div>
 
             <h4 class="text-white mt-4">1.3 El Ciclo de Vida de la Privacidad (Privacy by Design)</h4>
             <p class="text-secondary mb-4">La privacidad no es un parche que se añade al final; debe gestionarse desde el momento en que se diseña un sistema (Privacidad desde el Diseño). Esto implica tres principios rectores:</p>
-            <ul class="list-group list-group-flush rounded border border-secondary" style="background-color: var(--bg-surface);">
-                <li class="list-group-item bg-transparent text-secondary border-secondary p-3">
-                    <strong class="text-white">Minimización:</strong> No recolectar más datos de los estrictamente necesarios. Si vendes zapatos en línea, no necesitas preguntar el tipo de sangre del cliente.
-                </li>
-                <li class="list-group-item bg-transparent text-secondary border-secondary p-3">
-                    <strong class="text-white">Transparencia:</strong> Informar claramente mediante un Aviso de Privacidad visible y comprensible.
-                </li>
-                <li class="list-group-item bg-transparent text-secondary border-secondary p-3">
-                    <strong class="text-white">Limitación de la finalidad:</strong> Los datos solo pueden usarse para lo que fueron solicitados. Si recolectas un correo para un webinar, es ilegal usarlo después para enviarle publicidad de seguros sin un nuevo consentimiento.
-                </li>
-            </ul>
+            
+            <div class="stats-bar p-4 mb-4 text-start bg-dark border-secondary">
+                <div class="mb-4 pb-3 border-bottom border-secondary border-opacity-50">
+                    <strong class="text-white d-block mb-1">Minimización:</strong> 
+                    <span class="text-secondary small">No recolectar más datos de los estrictamente necesarios. Si vendes zapatos en línea, no necesitas preguntar el tipo de sangre del cliente.</span>
+                </div>
+                <div class="mb-4 pb-3 border-bottom border-secondary border-opacity-50">
+                    <strong class="text-white d-block mb-1">Transparencia:</strong> 
+                    <span class="text-secondary small">Informar claramente mediante un Aviso de Privacidad visible y comprensible.</span>
+                </div>
+                <div>
+                    <strong class="text-white d-block mb-1">Limitación de la finalidad:</strong> 
+                    <span class="text-secondary small">Los datos solo pueden usarse para lo que fueron solicitados. Si recolectas un correo para un webinar, es ilegal usarlo después para enviarle publicidad de seguros sin un nuevo consentimiento.</span>
+                </div>
+            </div>
         </section>
 
         <section class="mb-5 reveal">
@@ -79,20 +89,21 @@
             
             <h4 class="text-white mt-4">2.1 Principales Regulaciones Globales</h4>
             <p class="text-secondary">Como profesional de la tecnología, debes diseñar sistemas que cumplan con las leyes que rigen los flujos de datos transfronterizos:</p>
-            <div class="p-4 rounded border border-secondary mb-4" style="background-color: var(--bg-surface-hover);">
-                <p class="mb-3"><strong class="text-brand-accent">GDPR (Europa):</strong> El Reglamento General de Protección de Datos es el estándar de oro mundial. Introduce el "Derecho al Olvido" y establece multas devastadoras de hasta 20 millones de euros o el 4% de la facturación global anual de una empresa infractora.</p>
-                <p class="mb-3"><strong class="text-brand-accent">CCPA (California):</strong> La Ley de Privacidad del Consumidor de California, pionera y la más restrictiva en los Estados Unidos, enfocada en el derecho a rechazar la venta de datos.</p>
-                <p class="mb-0"><strong class="text-brand-accent">LFPDPPP (México):</strong> La Ley Federal de Protección de Datos Personales en Posesión de los Particulares. Establece las responsabilidades penales y administrativas, definiendo claramente las figuras del "Responsable" (quien decide sobre el dato) y el "Encargado" (quien procesa el dato, ej. AWS o Azure).</p>
+            
+            <div class="stats-bar p-4 border-secondary bg-dark mb-5">
+                <p class="mb-3"><strong class="brand-accent">GDPR (Europa):</strong> El Reglamento General de Protección de Datos es el estándar de oro mundial. Introduce el "Derecho al Olvido" y establece multas devastadoras de hasta 20 millones de euros o el 4% de la facturación global anual de una empresa infractora.</p>
+                <p class="mb-3"><strong class="brand-accent">CCPA (California):</strong> La Ley de Privacidad del Consumidor de California, pionera y la más restrictiva en los Estados Unidos, enfocada en el derecho a rechazar la venta de datos.</p>
+                <p class="mb-0"><strong class="brand-accent">LFPDPPP (México):</strong> La Ley Federal de Protección de Datos Personales en Posesión de los Particulares. Establece las responsabilidades penales y administrativas, definiendo claramente las figuras del "Responsable" (quien decide sobre el dato) y el "Encargado" (quien procesa el dato, ej. AWS o Azure).</p>
             </div>
 
             <div class="row g-5 mt-2">
                 <div class="col-lg-6">
                     <h4 class="text-white">2.2 Los Derechos ARCO</h4>
                     <p class="text-secondary">Representan el poder y control que cada persona tiene sobre su información en bases de datos de terceros:</p>
-                    <ul class="text-secondary">
-                        <li><strong class="text-white">Acceso:</strong> Derecho a saber qué datos tiene una organización sobre mí y cómo los obtuvieron.</li>
-                        <li><strong class="text-white">Rectificación:</strong> Derecho a pedir que corrijan mis datos si son inexactos o incompletos.</li>
-                        <li><strong class="text-white">Cancelación:</strong> Derecho a pedir que mis datos sean eliminados (sanitizados) cuando ya no sean necesarios para el fin original.</li>
+                    <ul class="text-secondary small mt-3">
+                        <li class="mb-2"><strong class="text-white">Acceso:</strong> Derecho a saber qué datos tiene una organización sobre mí y cómo los obtuvieron.</li>
+                        <li class="mb-2"><strong class="text-white">Rectificación:</strong> Derecho a pedir que corrijan mis datos si son inexactos o incompletos.</li>
+                        <li class="mb-2"><strong class="text-white">Cancelación:</strong> Derecho a pedir que mis datos sean eliminados (sanitizados) cuando ya no sean necesarios para el fin original.</li>
                         <li><strong class="text-white">Oposición:</strong> Derecho a negarme a que mis datos se usen para fines específicos, como mercadotecnia directa.</li>
                     </ul>
                 </div>
@@ -107,89 +118,96 @@
             <h2 class="fw-bold text-white mb-4 border-bottom border-secondary pb-2"><span class="brand-accent">#</span> Hoja 3: Amenazas y Técnicas de Protección</h2>
             
             <h4 class="text-white mt-4">3.1 Seguimiento y Perfilamiento (Profiling)</h4>
-            <p class="text-secondary mb-4">En el ecosistema web actual, la privacidad se ve amenazada por la recolección invisible de datos. El uso de Cookies de terceros, las Huellas digitales del navegador (Browser Fingerprinting) y los rastreadores multiplataforma permiten a los <em>Data Brokers</em> crear un perfil psicológico, económico y comercial detallado del usuario sin que este sea plenamente consciente de la profundidad del rastreo.</p>
+            <p class="text-secondary mb-5">En el ecosistema web actual, la privacidad se ve amenazada por la recolección invisible de datos. El uso de Cookies de terceros, las Huellas digitales del navegador (Browser Fingerprinting) y los rastreadores multiplataforma permiten a los <em>Data Brokers</em> crear un perfil psicológico, económico y comercial detallado del usuario sin que este sea plenamente consciente de la profundidad del rastreo.</p>
 
             <h4 class="text-white mt-4">3.2 Técnicas de Desidentificación</h4>
             <p class="text-secondary mb-4">Para que la ciencia de datos (Big Data) y el Machine Learning puedan operar sin violar la privacidad, se utilizan técnicas matemáticas que rompen el vínculo entre el dato y la identidad real de la persona:</p>
-            <div class="row g-3 text-center mb-5">
+            
+            <div class="row g-4 text-center mb-5">
                 <div class="col-md-4">
-                    <div class="p-4 border border-secondary rounded h-100 bg-dark">
-                        <i class="bi bi-eraser fs-1 text-danger mb-3 d-block"></i>
-                        <h5 class="text-white">Anonimización</h5>
-                        <p class="small text-secondary mt-2">Proceso irreversible. Se eliminan los identificadores directos e indirectos. Ante la ley, un dato verdaderamente anonimizado deja de ser considerado "dato personal".</p>
+                    <div class="p-4 border border-danger rounded h-100 bg-danger bg-opacity-10 transition-hover">
+                        <i class="bi bi-eraser-fill fs-1 text-danger mb-3 d-block"></i>
+                        <h5 class="text-danger fw-bold">Anonimización</h5>
+                        <p class="text-white small mt-2 mb-0">Proceso irreversible. Se eliminan los identificadores directos e indirectos. Ante la ley, un dato verdaderamente anonimizado deja de ser considerado "dato personal".</p>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="p-4 border border-secondary rounded h-100 bg-dark">
+                    <div class="p-4 border border-warning rounded h-100 bg-warning bg-opacity-10 transition-hover">
                         <i class="bi bi-incognito fs-1 text-warning mb-3 d-block"></i>
-                        <h5 class="text-white">Seudonimización</h5>
-                        <p class="small text-secondary mt-2">Se reemplazan los nombres por códigos o tokens (seudónimos). Es un proceso reversible si se tiene acceso a la "tabla de llaves" (que debe guardarse en un servidor separado).</p>
+                        <h5 class="text-warning fw-bold">Seudonimización</h5>
+                        <p class="text-white small mt-2 mb-0">Se reemplazan los nombres por códigos o tokens (seudónimos). Es un proceso reversible si se tiene acceso a la "tabla de llaves" (que debe guardarse en un servidor separado).</p>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="p-4 border border-secondary rounded h-100 bg-dark">
-                        <i class="bi bi-bar-chart-steps fs-1 text-info mb-3 d-block"></i>
-                        <h5 class="text-white">Privacidad Diferencial</h5>
-                        <p class="small text-secondary mt-2">Inyectar "ruido matemático" controlado en un dataset. Los patrones estadísticos generales se mantienen intactos y útiles, pero es matemáticamente imposible identificar a un individuo específico.</p>
+                    <div class="p-4 border border-info rounded h-100 bg-info bg-opacity-10 transition-hover">
+                        <i class="bi bi-bar-chart-line-fill fs-1 text-info mb-3 d-block"></i>
+                        <h5 class="text-info fw-bold">Privacidad Diferencial</h5>
+                        <p class="text-white small mt-2 mb-0">Inyectar "ruido matemático" controlado en un dataset. Los patrones estadísticos generales se mantienen intactos y útiles, pero es matemáticamente imposible identificar a un individuo específico.</p>
                     </div>
                 </div>
             </div>
 
             <h4 class="text-white mt-4">3.3 El Aviso de Privacidad</h4>
-            <p class="text-secondary">No es solo un requisito legal burocrático; es un contrato de confianza. Un Aviso de Privacidad ético debe ser <strong>Claro</strong> (sin lenguaje legal excesivamente complejo o engañoso), <strong>Accesible</strong> (mostrado antes de que el usuario envíe sus datos) y <strong>Específico</strong> (debe listar exactamente qué datos se recaban, por cuánto tiempo se almacenan y para qué fines se usarán).</p>
+            <p class="text-secondary">No es solo un requisito legal burocrático; es un contrato de confianza. Un Aviso de Privacidad ético debe ser <strong class="text-white">Claro</strong> (sin lenguaje legal excesivamente complejo o engañoso), <strong class="text-white">Accesible</strong> (mostrado antes de que el usuario envíe sus datos) y <strong class="text-white">Específico</strong> (debe listar exactamente qué datos se recaban, por cuánto tiempo se almacenan y para qué fines se usarán).</p>
         </section>
 
         <section class="mb-5 reveal">
             <h2 class="fw-bold text-white mb-4 border-bottom border-secondary pb-2"><span class="brand-accent">/</span> Laboratorios Interactivos</h2>
             
-            <div class="p-4 rounded border border-secondary mb-4" style="background-color: var(--bg-surface);">
-                <h4 class="text-white fw-bold">Actividad 1: Privacy Hero (Clasificador Rápido)</h4>
+            <div class="stats-bar p-4 mb-4 border-info border-opacity-50">
+                <h4 class="text-info fw-bold"><i class="bi bi-shield-check me-2"></i> Actividad 1: Privacy Hero (Clasificador Rápido)</h4>
                 <p class="text-secondary small mb-4">Evalúa tu capacidad para clasificar la información bajo presión. Clasifica el dato que aparece en pantalla como "Personal" o "Sensible". ¡Cuidado! Un error detendrá la simulación por una auditoría de privacidad.</p>
                 
-                <div class="text-center bg-dark p-4 rounded border border-secondary" id="ph-game-area">
-                    <h5 class="text-brand-accent mb-2">Dato a clasificar:</h5>
-                    <h2 class="text-white fw-bold py-4 px-3 bg-secondary bg-opacity-25 rounded d-inline-block border border-secondary" id="ph-word" style="min-width: 300px;">---</h2>
+                <div class="text-center bg-black p-4 rounded border border-secondary border-opacity-50" id="ph-game-area">
+                    <h5 class="text-info mb-3">Dato a clasificar:</h5>
+                    <h2 class="text-white fw-bold py-4 px-4 bg-secondary bg-opacity-25 rounded d-inline-block border border-secondary" id="ph-word" style="min-width: 300px;">---</h2>
                     
                     <div class="mt-4 d-flex justify-content-center gap-3">
                         <button class="btn btn-outline-info px-4 py-2 fw-bold" id="btn-personal" disabled>DATO PERSONAL</button>
                         <button class="btn btn-outline-danger px-4 py-2 fw-bold" id="btn-sensible" disabled>DATO SENSIBLE</button>
                     </div>
                     
-                    <div class="d-flex justify-content-between mt-4 text-secondary small font-monospace">
-                        <span id="ph-score">Score: 0</span>
-                        <button class="btn btn-sm btn-cyber" id="btn-start-ph">Iniciar Simulación</button>
+                    <div class="d-flex justify-content-between align-items-center mt-4 border-top border-secondary pt-3">
+                        <span id="ph-score" class="fw-bold font-monospace text-info">Score: 0</span>
+                        <button class="btn btn-sm btn-cyber fw-bold" id="btn-start-ph">Iniciar Simulación</button>
                     </div>
                 </div>
                 <div id="ph-feedback" class="mt-3 p-3 text-center d-none rounded fw-bold small border"></div>
             </div>
 
-            <div class="p-4 rounded border border-secondary mb-4" style="background-color: var(--bg-surface-hover);">
-                <h4 class="text-white fw-bold">Actividad 2: Terminal de Gestión de Derechos ARCO</h4>
-                <p class="text-secondary small mb-4">Eres el Data Privacy Officer (DPO). Has recibido una solicitud legal de <strong>Cancelación</strong>. Sigue los comandos para localizar al usuario, verificar sus datos y ejecutar el borrado.</p>
+            <div class="stats-bar p-0 mb-4 overflow-hidden border-warning border-opacity-50">
+                <div class="p-4 bg-dark border-bottom border-warning border-opacity-25">
+                    <h4 class="text-warning fw-bold mb-2"><i class="bi bi-terminal-fill me-2"></i> Actividad 2: Terminal de Gestión de Derechos ARCO</h4>
+                    <p class="text-secondary small mb-0">Eres el Data Privacy Officer (DPO). Has recibido una solicitud legal de <strong>Cancelación</strong>. Sigue los comandos para localizar al usuario, verificar sus datos y ejecutar el borrado lógico.</p>
+                </div>
                 
-                <div class="row g-0 rounded overflow-hidden border border-secondary">
-                    <div class="col-md-4 p-4 bg-dark">
-                        <h6 class="text-brand-accent fw-bold mb-3">Protocolo de Operación</h6>
+                <div class="row g-0">
+                    <div class="col-md-4 p-4 border-end border-warning border-opacity-25 bg-black">
+                        <h6 class="text-warning fw-bold mb-4">Protocolo de Operación</h6>
                         <ul class="text-secondary small list-unstyled font-monospace">
-                            <li class="mb-2">1. <span class="text-white">ls users/</span><br><span class="text-muted">Listar registros.</span></li>
-                            <li class="mb-2">2. <span class="text-white">search --email "juan@correo.com"</span><br><span class="text-muted">Localizar ID del titular.</span></li>
-                            <li class="mb-2">3. <span class="text-white">cat users/user_04.json</span><br><span class="text-muted">Inspeccionar datos.</span></li>
-                            <li class="mb-2">4. <span class="text-danger">delete --id 104 --confirm</span><br><span class="text-muted">Ejecutar Cancelación.</span></li>
-                            <li class="mb-0">5. <span class="text-white">audit --log</span><br><span class="text-muted">Verificar bitácora.</span></li>
+                            <li class="mb-3">1. <span class="text-white bg-dark px-1 rounded">ls users/</span><br><span class="text-muted">Listar registros.</span></li>
+                            <li class="mb-3">2. <span class="text-white bg-dark px-1 rounded">search --email "juan@correo.com"</span><br><span class="text-muted">Localizar ID del titular.</span></li>
+                            <li class="mb-3">3. <span class="text-white bg-dark px-1 rounded">cat users/user_04.json</span><br><span class="text-muted">Inspeccionar datos.</span></li>
+                            <li class="mb-3">4. <span class="text-danger bg-dark px-1 rounded">delete --id 104 --confirm</span><br><span class="text-muted">Ejecutar Cancelación.</span></li>
+                            <li class="mb-0">5. <span class="text-white bg-dark px-1 rounded">audit --log</span><br><span class="text-muted">Verificar bitácora.</span></li>
                         </ul>
                     </div>
-                    <div class="col-md-8">
-                        <div class="terminal-window h-100 rounded-0" style="border: none;">
+                    <div class="col-md-8 p-0 bg-dark">
+                        <div class="terminal-window h-100 rounded-0 border-0">
                             <div class="terminal-header d-flex align-items-center">
-                                <i class="bi bi-terminal text-secondary me-2"></i>
-                                <span class="text-secondary font-monospace" style="font-size: 0.85rem;">dpo@datasec:~/arco_system$</span>
+                                <div class="d-flex gap-2">
+                                    <span class="dot dot-red"></span>
+                                    <span class="dot dot-yellow"></span>
+                                    <span class="dot dot-green"></span>
+                                </div>
+                                <span class="text-secondary font-monospace ms-3" style="font-size: 0.85rem;">dpo@datasec:~/arco_system$</span>
                             </div>
-                            <div class="terminal-body" id="terminal-arco" style="min-height: 280px; max-height: 280px; overflow-y: auto;">
-                                <div class="text-info">Iniciando Consola de Gestión ARCO v2.0...</div>
+                            <div class="terminal-body" id="terminal-arco" style="min-height: 350px; max-height: 350px; overflow-y: auto;">
+                                <div class="text-warning fw-bold">Iniciando Consola de Gestión ARCO v2.0...</div>
                                 <br>
                                 <div class="terminal-input-row d-flex align-items-center mt-2">
                                     <span class="text-success font-monospace me-2">dpo@arco:~$</span>
-                                    <input type="text" class="terminal-input flex-grow-1" id="cmd-arco" autocomplete="off" spellcheck="false">
+                                    <input type="text" class="terminal-input flex-grow-1 font-monospace" id="cmd-arco" autocomplete="off" spellcheck="false" autocorrect="off">
                                 </div>
                             </div>
                         </div>
@@ -199,93 +217,93 @@
         </section>
 
         <section class="mb-5 reveal">
-            <h3 class="fw-bold text-white mb-4"><span class="brand-accent">/</span> Evaluación de Conocimientos</h3>
+            <h3 class="fw-bold text-white mb-4"><span class="brand-accent">/</span> Evaluación de Conocimientos Mód. 4</h3>
             
-            <div class="p-4 p-md-5 rounded border border-secondary" style="background-color: var(--bg-surface);">
+            <div class="stats-bar p-4 p-md-5 bg-dark border-secondary">
                 <form id="quiz-form-m4">
                     
-                    <div class="mb-5 border-bottom border-dark pb-4">
-                        <label class="text-white mb-3 fw-bold fs-5"><span class="text-secondary fs-6 me-2">01.</span> ¿Cuál es la diferencia fundamental entre Seguridad y Privacidad en la gestión de datos?</label>
-                        <div class="form-check mb-2">
-                            <input class="form-check-input border-secondary bg-dark" type="radio" name="m4q1" value="a" id="m4q1a" required>
+                    <div class="mb-5 border-bottom border-secondary border-opacity-50 pb-4">
+                        <label class="text-white mb-4 fw-bold fs-5"><span class="brand-accent fs-6 me-2">01.</span> ¿Cuál es la diferencia fundamental entre Seguridad y Privacidad en la gestión de datos?</label>
+                        <div class="form-check mb-3">
+                            <input class="form-check-input" type="radio" name="m4q1" value="a" id="m4q1a" required>
                             <label class="form-check-label text-secondary" for="m4q1a">La privacidad es para datos públicos y la seguridad para datos secretos.</label>
                         </div>
-                        <div class="form-check mb-2">
-                            <input class="form-check-input border-secondary bg-dark" type="radio" name="m4q1" value="b" id="m4q1b">
+                        <div class="form-check mb-3">
+                            <input class="form-check-input" type="radio" name="m4q1" value="b" id="m4q1b">
                             <label class="form-check-label text-secondary" for="m4q1b">La seguridad protege la información contra ataques; la privacidad dicta las reglas de acceso legítimo y el uso ético.</label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input border-secondary bg-dark" type="radio" name="m4q1" value="c" id="m4q1c">
+                            <input class="form-check-input" type="radio" name="m4q1" value="c" id="m4q1c">
                             <label class="form-check-label text-secondary" for="m4q1c">Son sinónimos; si un sistema es seguro, siempre respeta la privacidad.</label>
                         </div>
                     </div>
 
-                    <div class="mb-5 border-bottom border-dark pb-4">
-                        <label class="text-white mb-3 fw-bold fs-5"><span class="text-secondary fs-6 me-2">02.</span> Según las normativas, ¿cuál de los siguientes es considerado un "Dato Sensible" que requiere protección especial?</label>
-                        <div class="form-check mb-2">
-                            <input class="form-check-input border-secondary bg-dark" type="radio" name="m4q2" value="a" id="m4q2a" required>
+                    <div class="mb-5 border-bottom border-secondary border-opacity-50 pb-4">
+                        <label class="text-white mb-4 fw-bold fs-5"><span class="brand-accent fs-6 me-2">02.</span> Según las normativas, ¿cuál de los siguientes es considerado un "Dato Sensible" que requiere protección especial?</label>
+                        <div class="form-check mb-3">
+                            <input class="form-check-input" type="radio" name="m4q2" value="a" id="m4q2a" required>
                             <label class="form-check-label text-secondary" for="m4q2a">La dirección IP pública de navegación.</label>
                         </div>
-                        <div class="form-check mb-2">
-                            <input class="form-check-input border-secondary bg-dark" type="radio" name="m4q2" value="b" id="m4q2b">
+                        <div class="form-check mb-3">
+                            <input class="form-check-input" type="radio" name="m4q2" value="b" id="m4q2b">
                             <label class="form-check-label text-secondary" for="m4q2b">El correo electrónico institucional.</label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input border-secondary bg-dark" type="radio" name="m4q2" value="c" id="m4q2c">
+                            <input class="form-check-input" type="radio" name="m4q2" value="c" id="m4q2c">
                             <label class="form-check-label text-secondary" for="m4q2c">La afiliación política o el estado de salud.</label>
                         </div>
                     </div>
 
-                    <div class="mb-5 border-bottom border-dark pb-4">
-                        <label class="text-white mb-3 fw-bold fs-5"><span class="text-secondary fs-6 me-2">03.</span> El principio de <em>Privacy by Design</em> (Privacidad desde el Diseño) exige la "Minimización". ¿Qué significa esto?</label>
-                        <div class="form-check mb-2">
-                            <input class="form-check-input border-secondary bg-dark" type="radio" name="m4q3" value="a" id="m4q3a" required>
+                    <div class="mb-5 border-bottom border-secondary border-opacity-50 pb-4">
+                        <label class="text-white mb-4 fw-bold fs-5"><span class="brand-accent fs-6 me-2">03.</span> El principio de <em>Privacy by Design</em> (Privacidad desde el Diseño) exige la "Minimización". ¿Qué significa esto?</label>
+                        <div class="form-check mb-3">
+                            <input class="form-check-input" type="radio" name="m4q3" value="a" id="m4q3a" required>
                             <label class="form-check-label text-secondary" for="m4q3a">Comprimir los archivos para que ocupen menos espacio en el disco duro.</label>
                         </div>
-                        <div class="form-check mb-2">
-                            <input class="form-check-input border-secondary bg-dark" type="radio" name="m4q3" value="b" id="m4q3b">
+                        <div class="form-check mb-3">
+                            <input class="form-check-input" type="radio" name="m4q3" value="b" id="m4q3b">
                             <label class="form-check-label text-secondary" for="m4q3b">Recolectar única y exclusivamente los datos estrictamente necesarios para la función del sistema.</label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input border-secondary bg-dark" type="radio" name="m4q3" value="c" id="m4q3c">
+                            <input class="form-check-input" type="radio" name="m4q3" value="c" id="m4q3c">
                             <label class="form-check-label text-secondary" for="m4q3c">Minimizar el tamaño del Aviso de Privacidad para que se lea rápido.</label>
                         </div>
                     </div>
 
-                    <div class="mb-5 border-bottom border-dark pb-4">
-                        <label class="text-white mb-3 fw-bold fs-5"><span class="text-secondary fs-6 me-2">04.</span> En los derechos ARCO, ¿a qué se refiere el derecho de "Cancelación"?</label>
-                        <div class="form-check mb-2">
-                            <input class="form-check-input border-secondary bg-dark" type="radio" name="m4q4" value="a" id="m4q4a" required>
+                    <div class="mb-5 border-bottom border-secondary border-opacity-50 pb-4">
+                        <label class="text-white mb-4 fw-bold fs-5"><span class="brand-accent fs-6 me-2">04.</span> En los derechos ARCO, ¿a qué se refiere el derecho de "Cancelación"?</label>
+                        <div class="form-check mb-3">
+                            <input class="form-check-input" type="radio" name="m4q4" value="a" id="m4q4a" required>
                             <label class="form-check-label text-secondary" for="m4q4a">El derecho a cancelar la cuenta de usuario en el sitio web, pero dejando los datos en el servidor.</label>
                         </div>
-                        <div class="form-check mb-2">
-                            <input class="form-check-input border-secondary bg-dark" type="radio" name="m4q4" value="b" id="m4q4b">
+                        <div class="form-check mb-3">
+                            <input class="form-check-input" type="radio" name="m4q4" value="b" id="m4q4b">
                             <label class="form-check-label text-secondary" for="m4q4b">El derecho a que los datos sean eliminados y sanitizados cuando ya no sean necesarios para su fin original.</label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input border-secondary bg-dark" type="radio" name="m4q4" value="c" id="m4q4c">
+                            <input class="form-check-input" type="radio" name="m4q4" value="c" id="m4q4c">
                             <label class="form-check-label text-secondary" for="m4q4c">El derecho a cancelar la recepción de correos de spam.</label>
                         </div>
                     </div>
 
-                    <div class="mb-5 border-bottom border-dark pb-4">
-                        <label class="text-white mb-3 fw-bold fs-5"><span class="text-secondary fs-6 me-2">05.</span> ¿Cuál es la diferencia técnica entre Anonimización y Seudonimización?</label>
-                        <div class="form-check mb-2">
-                            <input class="form-check-input border-secondary bg-dark" type="radio" name="m4q5" value="a" id="m4q5a" required>
+                    <div class="mb-5 pb-2">
+                        <label class="text-white mb-4 fw-bold fs-5"><span class="brand-accent fs-6 me-2">05.</span> ¿Cuál es la diferencia técnica entre Anonimización y Seudonimización?</label>
+                        <div class="form-check mb-3">
+                            <input class="form-check-input" type="radio" name="m4q5" value="a" id="m4q5a" required>
                             <label class="form-check-label text-secondary" for="m4q5a">La Anonimización es reversible si se tiene la llave; la Seudonimización es un proceso irreversible y definitivo.</label>
                         </div>
-                        <div class="form-check mb-2">
-                            <input class="form-check-input border-secondary bg-dark" type="radio" name="m4q5" value="b" id="m4q5b">
+                        <div class="form-check mb-3">
+                            <input class="form-check-input" type="radio" name="m4q5" value="b" id="m4q5b">
                             <label class="form-check-label text-secondary" for="m4q5b">La Anonimización elimina identificadores de forma irreversible; la Seudonimización los reemplaza por códigos reversibles mediante una tabla de llaves.</label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input border-secondary bg-dark" type="radio" name="m4q5" value="c" id="m4q5c">
+                            <input class="form-check-input" type="radio" name="m4q5" value="c" id="m4q5c">
                             <label class="form-check-label text-secondary" for="m4q5c">Ambas técnicas hacen exactamente lo mismo, solo cambian de nombre en el GDPR vs LFPDPPP.</label>
                         </div>
                     </div>
 
-                    <div class="text-center mt-5">
-                        <button type="submit" class="btn btn-cyber px-5 py-3 fs-5 w-100 w-md-auto">Calificar Módulo</button>
+                    <div class="text-center mt-2">
+                        <button type="submit" class="btn btn-cyber px-5 py-3 fs-5 w-100 w-md-auto"><i class="bi bi-send-check-fill me-2"></i> Calificar Módulo 4</button>
                     </div>
                 </form>
                 
@@ -295,9 +313,9 @@
 
     </main>
 
-    <footer class="text-center py-4 border-top mt-auto" style="border-color: var(--border-color) !important; background-color: var(--bg-main);">
-        <div class="container">
-            <p class="text-secondary small mb-0">&copy; 2026 DataSec Academy - Proyecto de Seguridad de la Información.</p>
+    <footer class="footer-site mt-auto">
+        <div class="container text-center">
+            <p class="text-muted tiny font-monospace mb-0">&copy; 2026 DataSec Academy - Proyecto de Seguridad de la Información BUAP.</p>
         </div>
     </footer>
 
